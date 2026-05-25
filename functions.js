@@ -1,7 +1,4 @@
-﻿Office.onReady(() => {
-
-    console.log("Custom functions runtime ready.");
-});
+﻿
 
 /** @customfunction */
 function TESTPING() {

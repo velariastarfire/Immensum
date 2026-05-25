@@ -31,6 +31,8 @@
 				<AllFormFactorsSettings>
 					<AllowCustomFunctionNetwork>true</AllowCustomFunctionNetwork>
 				</AllFormFactorsSettings>
+
+				<!-- Your existing block -->
 				<AllFormFactors>
 					<ExtensionPoint xsi:type="CustomFunctions">
 						<Script>
@@ -45,11 +47,16 @@
 						<Namespace resid="Functions.Namespace"/>
 					</ExtensionPoint>
 				</AllFormFactors>
+
+				<!-- ⭐ The block you ADD -->
 				<AllFormFactors>
 					<ExtensionPoint xsi:type="SharedRuntime">
 						<SourceLocation resid="Functions.SharedRuntime.Url"/>
 					</ExtensionPoint>
 				</AllFormFactors>
+
+
+
 
 				<DesktopFormFactor>
 					<FunctionFile resid="Functions.SharedRuntime.Url"/>

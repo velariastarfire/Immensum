@@ -15,7 +15,7 @@
 		</Sets>
 	</Requirements>
 	<DefaultSettings>
-		<SourceLocation DefaultValue="https://immensum-interface.velariastarfire.workers.dev/taskpane.html"/>
+		<SourceLocation DefaultValue="https://velariastarfire.github.io/Immensum/taskpane.html"/>
 	</DefaultSettings>
 <AppDomains>
     <AppDomain>https://immensum-core.velariastarfire.workers.dev</AppDomain>
@@ -85,11 +85,11 @@
 				<bt:Image id="Icon.80x80" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/assets/icon-80.png"/>
 			</bt:Images>
 			<bt:Urls>
-				<bt:Url id="Functions.SharedRuntime.Url" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/functions.html"/>
-				<bt:Url id="Functions.Script.Url" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/functions.js"/>
-				<bt:Url id="Functions.Page.Url" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/functions.html"/>
-				<bt:Url id="Functions.Metadata.Url" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/functions.json"/>
-				<bt:Url id="Taskpane.Url" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/taskpane.html"/>
+				<bt:Url id="Functions.SharedRuntime.Url" DefaultValue="https://velariastarfire.github.io/Immensum/functions.html"/>
+				<bt:Url id="Functions.Script.Url" DefaultValue="https://velariastarfire.github.io/Immensum/functions.js"/>
+				<bt:Url id="Functions.Page.Url" DefaultValue="https://velariastarfire.github.io/Immensum/functions.html"/>
+				<bt:Url id="Functions.Metadata.Url" DefaultValue="https://velariastarfire.github.io/Immensum/functions.json"/>
+				<bt:Url id="Taskpane.Url" DefaultValue="https://velariastarfire.github.io/Immensum/taskpane.html"/>
 			</bt:Urls>
 			<bt:ShortStrings>
 				<bt:String id="Functions.Namespace" DefaultValue="IMMENSUM"/>

@@ -1,6 +1,8 @@
 ﻿Office.onReady(() => {
+    console.log("Office is ready.");
 
-    console.log("Custom functions runtime ready.");
+    // your startup logic goes here
+    // event handlers, button wiring, UI setup, etc.
 });
 
 /** @customfunction */

@@ -1,6 +1,4 @@
-﻿
-
-/** @customfunction */
+﻿/** @customfunction */
 function TESTPING() {
     // Return a string immediately. 
     // We will use a separate async handler to update it.

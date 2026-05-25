@@ -2,7 +2,6 @@
 window.IMMENSUM_DATA = {};
 
 
-
 async function runDirectTest(val1, val2) {
     const response = await fetch('https://immensum-core.velariastarfire.workers.dev/', {
         method: 'POST',

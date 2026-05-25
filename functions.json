@@ -1,0 +1,31 @@
+{
+  "functions": [
+    {
+      "id": "TESTPING",
+      "name": "TESTPING",
+      "description": "Test connection to Immensum Engine",
+      "parameters": [],
+      "result": { "type": "string" }
+    },
+    {
+      "id": "IMMENSUM_CALC",
+      "name": "IMMENSUM_CALC",
+      "description": "Performs high-precision addition",
+      "parameters": [
+        {
+          "name": "val1",
+          "description": "First integer",
+          "type": "string"
+        },
+        {
+          "name": "val2",
+          "description": "Second integer",
+          "type": "string"
+        }
+      ],
+      "result": {
+        "type": "string"
+      }
+    }
+  ]
+}

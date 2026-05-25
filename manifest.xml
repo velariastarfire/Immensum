@@ -45,6 +45,12 @@
 						<Namespace resid="Functions.Namespace"/>
 					</ExtensionPoint>
 				</AllFormFactors>
+				<AllFormFactors>
+					<ExtensionPoint xsi:type="SharedRuntime">
+						<SourceLocation resid="Functions.SharedRuntime.Url"/>
+					</ExtensionPoint>
+				</AllFormFactors>
+
 				<DesktopFormFactor>
 					<FunctionFile resid="Functions.SharedRuntime.Url"/>
 					<ExtensionPoint xsi:type="PrimaryCommandSurface">

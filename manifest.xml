@@ -19,7 +19,7 @@
 	</DefaultSettings>
 <AppDomains>
     <AppDomain>https://immensum-core.velariastarfire.workers.dev</AppDomain>
-    <AppDomain>https://immensum-interface.velariastarfire.workers.dev</AppDomain>
+    <AppDomain>https://velariastarfire.github.io/Immensum</AppDomain>
 </AppDomains>
 	<Permissions>ReadWriteDocument</Permissions>
 	<VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -80,9 +80,9 @@
 		</Hosts>
 		<Resources>
 			<bt:Images>
-				<bt:Image id="Icon.16x16" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/assets/icon-16.png"/>
-				<bt:Image id="Icon.32x32" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/assets/icon-32.png"/>
-				<bt:Image id="Icon.80x80" DefaultValue="https://immensum-interface.velariastarfire.workers.dev/assets/icon-80.png"/>
+				<bt:Image id="Icon.16x16" DefaultValue="https://velariastarfire.github.io/Immensum/assets/icon-16.png"/>
+				<bt:Image id="Icon.32x32" DefaultValue="https://velariastarfire.github.io/Immensum/assets/icon-32.png"/>
+				<bt:Image id="Icon.80x80" DefaultValue="https://velariastarfire.github.io/Immensum/assets/icon-80.png"/>
 			</bt:Images>
 			<bt:Urls>
 				<bt:Url id="Functions.SharedRuntime.Url" DefaultValue="https://velariastarfire.github.io/Immensum/functions.html"/>

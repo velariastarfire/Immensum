@@ -1,4 +1,9 @@
-﻿/** @customfunction */
+﻿Office.onReady(() => {
+
+    console.log("Custom functions runtime ready.");
+});
+
+/** @customfunction */
 function TESTPING() {
     // Return a string immediately. 
     // We will use a separate async handler to update it.

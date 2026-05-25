@@ -2,20 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Immensum Excel Plug-In</title>
-    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
 </head>
 <body>
-    <div id="main-screen" class="card">
-        <h3>Immensum Engine</h3>
-        <p>Engine status: <strong>Active & Connected</strong></p>
-        <p>Ready for coordinate analysis.</p>
-    </div>
-
-    <div id="status-display">Waiting for engine...</div>
+    <h3>Immensum Engine</h3>
+    <p id="status">Waiting...</p>
     <button id="testButton">Test Cloud Connection</button>
 
-    <script src="taskpane.js" type="text/javascript"></script>
+    <script src="taskpane.js"></script>
 </body>
 </html>

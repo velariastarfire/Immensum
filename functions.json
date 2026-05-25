@@ -3,29 +3,25 @@
     {
       "id": "TESTPING",
       "name": "TESTPING",
-      "description": "Test connection to Immensum Engine",
+      "description": "Test function",
       "parameters": [],
       "result": { "type": "string" }
     },
     {
       "id": "IMMENSUM_CALC",
       "name": "IMMENSUM_CALC",
-      "description": "Performs high-precision addition",
+      "description": "Adds two numbers via the Immensum engine",
       "parameters": [
         {
-          "name": "val1",
-          "description": "First integer",
-          "type": "string"
+          "name": "a",
+          "type": "number"
         },
         {
-          "name": "val2",
-          "description": "Second integer",
-          "type": "string"
+          "name": "b",
+          "type": "number"
         }
       ],
-      "result": {
-        "type": "string"
-      }
+      "result": { "type": "string" }
     }
   ]
 }

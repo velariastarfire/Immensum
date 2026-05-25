@@ -1,25 +1,13 @@
-// A global object that the Custom Function can see
-window.IMMENSUM_DATA = {};
-
 Office.onReady(() => {
-    console.log("Taskpane ready.");
-
     const btn = document.getElementById("testButton");
-    if (btn) {
-        btn.onclick = () => runDirectTest(2, 3);
-    }
+    btn.onclick = async () => {
+        const res = await fetch("https://immensum-core.velariastarfire.workers.dev/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ a: 2, b: 3 })
+        });
+
+        const data = await res.json();
+        document.getElementById("status").textContent = "Result: " + data.result;
+    };
 });
-
-async function runDirectTest(val1, val2) {
-    const response = await fetch('https://immensum-core.velariastarfire.workers.dev/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            a: String(val1),
-            b: String(val2)
-        })
-    });
-
-    const data = await response.json();
-    window.IMMENSUM_DATA[`${String(val1)}-${String(val2)}`] = data.answer;
-}

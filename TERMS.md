@@ -1,30 +1,23 @@
-# Terms of Service for Immensum
+# Terms of Service for Immensum for Google Sheets™
 
-**Effective Date:** May 31, 2026  
+**Effective Date:** June 1, 2026  
 **Developer:** Velaria Starfire / Recursive Roots  
 
-Welcome to Immensum! By installing and using this Google Sheets Add-on, you agree to comply with and be bound by the following Terms of Service.
+By installing and using Immensum for Google Sheets™ ("the Software"), you agree to be bound by these Terms of Service.
 
-### 1. Description of Service
-Immensum ("the Add-on") is a developer and mathematical processing utility designed to extend Google Sheets with high-precision, infinite-size large integer calculation formulas (`=BIGADD()`, `=BIGSUB()`, `=BIGMUL()`, and `=BIGDIV()`). 
+### 1. License & Usage
+* **License Grant:** Subject to subscription validation or licensing terms, you are granted a non-exclusive, non-transferable license to use the Software inside Google Sheets™.
+* **Restrictions:** You agree not to reverse engineer, attempt to disrupt the core server-side computation engine, or redistribute the Software without explicit authorization.
 
-### 2. License and Usage
-* **License Restrictions:** We grant you a revocable, non-exclusive, non-transferable, limited license to download, install, and use the Add-on strictly for your computing needs in accordance with these terms.
-* **Subscription & Authentication:** Access to full features requires a valid subscription license key verified via our system. You agree not to attempt to bypass, crack, or systematically reverse-engineer the license authentication framework.
+### 2. Service Availability & Performance
+* **As-Is Basis:** The Software is provided "as is" and "as available." While our calculation engine is built for flawless mathematical fidelity, we make no guarantees regarding uninterrupted uptime.
+* **Data Limitations:** You acknowledge that passing exceptionally massive datasets relies on active network connectivity to process inputs.
 
-### 3. Data Processing and Privacy
-Immensum operates entirely as a **stateless** processing pipeline. 
-* Mathematical calculations are temporarily executed in-memory via an encrypted external routing bridge to a Cloudflare Worker environment.
-* No numerical inputs, formula variables, or calculations are logged, permanently written, or stored on our servers. 
+### 3. Subscriptions & Licensing
+* License keys are issued for account validation as displayed in the Immensum Console sidebar. Sharing license keys outside your authorized seats may result in a suspension of engine access.
 
-### 4. No Warranty ("As Is")
-The Add-on is provided on an "AS IS" and "AS AVAILABLE" basis. While we build for extreme cryptographic precision, Recursive Roots makes no guarantees that the mathematical computations will always be error-free or uninterrupted for every specific system setup. Use in production environments is at your own risk.
+### 4. Limitation of Liability
+In no event shall Velaria Starfire or Recursive Roots be liable for any indirect, incidental, or consequential damages arising out of the use or inability to use the Software.
 
-### 5. Limitation of Liability
-In no event shall Recursive Roots or its developers be held liable for any indirect, incidental, consequential, or special damages arising out of or in connection with your use or inability to use the mathematical features of this tool.
-
-### 6. Modifications to Service
-We reserve the right to optimize, update, or temporarily modify endpoints of the computation bridge to improve performance or update security patching. 
-
-### 7. Contact
-For any support inquiries regarding licensing or integration parameters, please reach out via our primary developer communication channels on GitHub.
+---
+*Google Sheets™ is a trademark of Google LLC.*

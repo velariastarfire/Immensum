@@ -1,29 +1,25 @@
-# Privacy Policy for Immensum
+# Privacy Policy for Immensum for Google Sheets™
 
-**Effective Date:** May 31, 2026  
+**Effective Date:** June 1, 2026  
 **Developer:** Velaria Starfire / Recursive Roots  
-**Contact:** [Your Contact Email or GitHub Profile Link]
 
-Recursive Roots ("we," "our," or "us") operates the Immensum Google Sheets Add-on and its connected mathematical calculation processing engine (the "Service"). We are fundamentally committed to the privacy and security of our users.
+Your privacy is paramount. Immensum for Google Sheets™ ("the Software") is designed to process high-precision calculations securely and transparently. This Privacy Policy outlines how data is handled.
 
-### 1. The Core Principle: Absolute Statelessness
-Immensum is designed as a secure, stateless execution utility. The data processing pipeline handles large-integer and high-precision calculations completely in-memory. 
-* **No Core Data Storage:** Any numerical inputs, data cell strings, or mathematical calculations (`a` and `b` parameters) submitted to our processing bridge are evaluated instantly in volatile memory on our Cloudflare Worker environment.
-* **No Logging:** We do not log, record, write, or track the contents of your calculations, cell metrics, spreadsheet titles, or numeric values. Once the result is sent back to your Google Sheet, the data completely vanishes from our servers.
+### 1. Data Collection & Processing
+* **No Personal Data Stored:** The Software does not collect, harvest, or permanently store any personal data, email addresses, or user credentials.
+* **Calculation Data Transmitted:** To perform arbitrary-precision mathematics, numeric inputs from your spreadsheet are temporarily transmitted to our secure computation engine. 
+* **Data Transience:** This numeric data is processed entirely in-memory. Once the calculation is complete and the text string result is returned to your Google Sheet, the data is instantly dropped from memory. We do not logs or store your spreadsheet inputs.
 
-### 2. Information Collected and Permissions Used
-To function properly, the Immensum Add-on requests access to the following limited scopes via Google OAuth:
-* `https://www.googleapis.com/auth/spreadsheets.currentonly`: Used solely to read active numbers selected by the user for calculations and to write the processed results back into the user's active spreadsheet cells. We cannot read your broader Google Drive or other files.
-* `https://www.googleapis.com/auth/script.external_request`: Used to securely route your numbers over an encrypted HTTPS connection to our external calculation engine.
-* `https://www.googleapis.com/auth/script.container.ui`: Used to display the Immensum custom sidebar Console.
+### 2. Google Workspace Permissions (Scopes)
+The Software requests specific permissions via Google OAuth solely to execute its core functions:
+* **View and manage spreadsheets this application is installed in:** Required to read the numeric inputs you pass to our custom formulas and write back the exact text results.
+* **Connect to an external service:** Required to send numeric inputs to our secure server-side engine for processing.
 
-### 3. Subscription & License Key Verification
-When you enter a license key into the Immensum Console:
-* The license string is stored locally on *your device* inside your secure Google Workspace User Properties container.
-* The key is cross-checked against our licensing provider (Lemon Squeezy) to verify subscription validity. No data from your spreadsheets is ever attached to this license verification request.
+### 3. Third-Party Sharing
+We do not sell, trade, or share your data with any third parties. Your data never leaves our secure execution path.
 
-### 4. Data Sharing and Third Parties
-Because we do not store, harvest, or collect your data, we have absolutely zero user calculation data to share, sell, distribute, or monetize with third parties.
+### 4. Contact & Support
+For questions regarding this policy, please open an issue at our official support repository: https://github.com/velariastarfire/Immensum/issues
 
-### 5. Changes to This Policy
-We preserve the right to update this policy to reflect future optimizations. Any changes will be committed directly to this public domain profile.
+---
+*Google Sheets™ is a trademark of Google LLC.*

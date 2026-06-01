@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immensum Engine Core</title>
+    <style>
+        :root {
+            --space-bg: #060214;
+            --nebula-glow: linear-gradient(180deg, #120024 0%, #060214 100%);
+            --starlight: #e2d9f3;
+            --electric-blue: #00e5ff;
+            --cosmic-gold: #ffd700;
+            --terminal-dark: #0a051d;
+            --card-bg: rgba(26, 0, 51, 0.4);
+        }
+
+        body {
+            background-color: var(--space-bg);
+            background-image: var(--nebula-glow);
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-back {
+            padding: 30px 40px;
+            max-width: 1200px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .nav-back a {
+            color: var(--electric-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: opacity 0.2s;
+        }
+
+        .nav-back a:hover { opacity: 0.8; }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+            box-sizing: border-box;
+        }
+
+        .engine-header {
+            border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .engine-title-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 4px;
+            margin: 0;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ffffff 0%, var(--electric-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .status-badge {
+            border: 1px solid var(--electric-blue);
+            color: var(--electric-blue);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+        }
+
+        .tagline {
+            color: var(--cosmic-gold);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        /* Module Grid Setup */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .module-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px;
+            transition: all 0.3s ease;
+        }
+
+        .module-card.active {
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.03);
+        }
+
+        .module-card.placeholder {
+            border-style: dashed;
+            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(26, 0, 51, 0.15);
+        }
+
+        .module-meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--starlight);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .module-card.active .module-meta {
+            color: var(--cosmic-gold);
+        }
+
+        h2 {
+            margin: 0 0 15px 0;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+
+        .module-card.placeholder h2 {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        p {
+            color: #b0a8c3;
+            line-height: 1.6;
+            margin: 0 0 30px 0;
+            font-size: 0.95rem;
+        }
+
+        .module-card.placeholder p {
+            color: rgba(176, 168, 195, 0.4);
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--cosmic-gold) 0%, #cc9900 100%);
+            color: #060214;
+        }
+
+        .btn-primary:hover { opacity: 0.9; }
+
+        .btn-disabled {
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.2);
+            cursor: not-allowed;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 40px 20px;
+            text-align: center;
+            color: rgba(255,255,255,0.2);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-back">
+        <a href="../">← Return to Motherstation</a>
+    </nav>
+
+    <main class="container">
+        <header class="engine-header">
+            <div class="engine-title-area">
+                <div>
+                    <h1>Immensum</h1>
+                    <div class="tagline">Arbitrary-Length Precision Mathematics Engine</div>
+                </div>
+                <div class="status-badge">Core Operational</div>
+            </div>
+        </header>
+
+        <section class="module-grid">
+            <!-- MODULE 1: GOOGLE SHEETS DEPLOYMENT -->
+            <article class="module-card active">
+                <div>
+                    <span class="module-meta">Environment v1.0</span>
+                    <h2>Google Workspace</h2>
+                    <p>Integrate infinite numerical processing boundaries directly into cloud-based sheets. Shatter standard spreadsheet precision restrictions with server-side computation loops.</p>
+                </div>
+                <!-- You can swap this link with your actual installation URL later -->
+                <a href="#" class="btn btn-primary">Initialize Extension</a>
+            </article>
+
+            <!-- MODULE 2: EXCEL PIPELINE PLACEHOLDER -->
+            <article class="module-card placeholder">
+                <div>
+                    <span class="module-meta">Environment v2.0 • In Orbit</span>
+                    <h2>Desktop Excel</h2>
+                    <p>Native integration framework designed for offline desktop environments. Bypassing legacy application memory constraints. Currently undergoing alignment calibration.</p>
+                </div>
+                <a href="#" class="btn btn-disabled" onclick="return false;">Staged</a>
+            </article>
+
+            <!-- MODULE 3: THE FUTURE APPLICATION VENTURE -->
+            <article class="module-card placeholder">
+                <div>
+                    <span class="module-meta">Environment v3.0 • Conceptual</span>
+                    <h2>Standalone Interface</h2>
+                    <p>A decoupled, cross-platform calculation environment. Designed to take whatever processing shape the data vectors require—whether macro-app, web platform, or direct runtime console.</p>
+                </div>
+                <a href="#" class="btn btn-disabled" onclick="return false;">Locked</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Recursive Roots • Immensum Engine Core v1.0
+    </footer>
+
+</body>
+</html>

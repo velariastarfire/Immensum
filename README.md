@@ -1,18 +1,35 @@
-# Immensum Google Plug-in
+# Immensum for Google Sheets™
 
-**Immensum is a high‑precision numerical engine designed to handle integers far beyond the limits of native JavaScript, Java, or Excel.  
-It accepts arbitrarily large numeric inputs, performs mathematically exact operations inside a protected server‑side core, and returns the results as truth‑preserving text strings so no precision is ever lost.
+> The infinite, made calculable. 
 
-Where normal languages overflow, round, or collapse into scientific notation, Immensum continues cleanly — digit by digit — maintaining full fidelity across every operation.
+Immensum is a high-precision numerical engine designed to handle massive integers far beyond the native processing limits of traditional spreadsheets. By computing arbitrary-precision inputs inside a secure server-side core, Immensum ensures your data maintains absolute mathematical fidelity—digit by digit—with zero rounding, distortion, or overflow errors.
 
-It acts as a black‑box computation vault:
+---
 
-Excel sends the inputs
+## 🚀 Key Features
 
-Our Engine performs the high‑precision math
+* **Infinite Precision Arithmetic:** Perform flawless calculations on numbers of arbitrary length without hitting standard 64-bit float limitations.
+* **Zero Data Distortion:** Prevents spreadsheets from truncating large numbers or forcing them into unreadable scientific notation.
+* **Secure Execution:** Processes inputs within a protected black-box environment, returning exact answers directly to your sheet as crisp, lossless text strings.
+* **Slick Sidebar Console:** Manage your licenses, subscriptions, and quick actions natively alongside your data.
 
-The engine returns the exact result as a string
+---
 
-Excel displays it without distortion
+## 🛠️ How It Works
 
-This allows spreadsheets to work with numbers that would normally be impossible — astronomical scales, deep‑precision constants, harmonic sequences, coordinate systems, and any domain where truth of magnitude matters.
+1. **Input:** Google Sheets™ passes your massive numeric values safely to the Immensum core engine.
+2. **Compute:** The engine calculates the data down to the exact digit without any truncation.
+3. **Output:** The exact result is returned to your cell instantly as a stable text string, preserving every single decimal and integer.
+
+Perfect for advanced cryptography data, massive financial ledgers, scientific datasets, or any high-stakes project where a single lost digit of precision compromises the entire calculation.
+
+---
+
+## 📄 Compliance & Resources
+
+* [Terms of Service](TERMS.md)
+* [Privacy Policy](PRIVACY.md)
+* [Support & Bug Reports](https://github.com/velariastarfire/Immensum/issues)
+
+---
+*Google Sheets™ is a trademark of Google LLC. Immensum for Google Sheets™ is an independent software tool and is not affiliated with, endorsed by, or connected to Google LLC.*

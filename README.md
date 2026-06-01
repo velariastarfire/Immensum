@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="image_dffde3.jpg" alt="Immensum Logo" width="200" style="border-radius: 15px;"/>
+</p>
 # Immensum for Google Sheets™
 
 > The infinite, made calculable. 

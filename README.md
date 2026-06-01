@@ -1,4 +1,4 @@
-Immensum Google Plug-in
+# Immensum Google Plug-in
 
 **Immensum is a high‑precision numerical engine designed to handle integers far beyond the limits of native JavaScript, Java, or Excel.  
 It accepts arbitrarily large numeric inputs, performs mathematically exact operations inside a protected server‑side core, and returns the results as truth‑preserving text strings so no precision is ever lost.

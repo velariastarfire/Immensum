@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="image_dffde3.jpg" alt="Immensum Logo" width="200" style="border-radius: 15px;"/>
+  <img src="https://raw.githubusercontent.com/velariastarfire/Immensum/refs/heads/main/Assets/Logo%20128.png" alt="Immensum Logo" width="200" style="border-radius: 15px;"/>
 </p>
 # Immensum for Google Sheets™
 

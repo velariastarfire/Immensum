@@ -1,0 +1,172 @@
+/* 🌌 IMMENSUM CORE DESIGN STYLE */
+
+/* 1. Resetting the canvas for a clean template */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. Turning on the dark-mode cosmic engine */
+body {
+    background-color: #0b091a; /* Deep space dark purple */
+    color: #e2e8f0; /* Crisp white-silver for body text */
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Subtly embedding our favored cosmic neon atmosphere */
+    background-image: radial-gradient(circle at 50% 0%, #1e1145 0%, #0b091a 70%);
+}
+
+/* 3. The Navigation Forge Bar */
+.forge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(11, 9, 26, 0.8);
+    backdrop-filter: blur(12px); /* Sleek glassmorphism */
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand-name {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: #ffd700; /* Rich gold from our coin badge */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00d4ff; /* Dynamic cyan glow link hover */
+}
+
+/* 4. The Hero Spotlight Banner */
+.hero-section {
+    text-align: center;
+    padding: 8rem 2rem;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    /* Beautiful gradient text pulling from your sidebar theme */
+    background: linear-gradient(135deg, #ffd700 30%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    color: #94a3b8;
+}
+
+/* 5. Buttons forged for action */
+.cta-buttons a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00d4ff, #0072ff);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+}
+
+.btn-secondary {
+    border: 2px solid rgba(0, 212, 255, 0.4);
+    color: #00d4ff;
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 212, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* 6. Grid system for features */
+.features-grid {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.features-grid h2, .data-showcase h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.features-grid div.feature-card {
+    background: linear-gradient(145deg, #13112c, #0f0d24);
+    border: 1px solid rgba(255, 215, 0, 0.05); /* Soft gold edge */
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.features-grid div.feature-card:hover {
+    transform: scale(1.02);
+    border-color: rgba(0, 212, 255, 0.2);
+}
+
+.feature-card h3 {
+    color: #00d4ff; /* Cyan title text */
+    margin-bottom: 0.5rem;
+}
+
+/* 7. Compliant layout for the footer */
+.forge-footer {
+    background: #060512;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 215, 0, 0.05);
+    margin-top: 6rem;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.legal-links {
+    margin-top: 1rem;
+}
+
+.legal-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+    color: #ffd700; /* Gold flip on legal hover */
+}
+
+.divider {
+    margin: 0 0.5rem;
+    color: #334155;
+}

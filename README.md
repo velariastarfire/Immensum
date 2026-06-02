@@ -27,8 +27,8 @@ Perfect for advanced cryptography data, massive financial ledgers, scientific da
 
 ## 📄 Compliance & Resources
 
-* [Terms of Service](TERMS.md)
-* [Privacy Policy](PRIVACY.md)
+* [Terms of Service](https://velariastarfire.github.io/Immensum/terms.html)
+* [Privacy Policy](https://velariastarfire.github.io/Immensum/privacy.html)
 * [Support & Bug Reports](https://github.com/velariastarfire/Immensum/issues)
 
 ---

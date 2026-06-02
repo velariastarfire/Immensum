@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Immensum</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extra structural polish for long legal walls */
+        .legal-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        .legal-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffd700 30%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .meta-info {
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+        }
+        .legal-section {
+            background: linear-gradient(145deg, #13112c, #0f0d24);
+            border: 1px solid rgba(255, 215, 0, 0.05);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .legal-section h3 {
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+        .legal-section ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .legal-section li {
+            margin-bottom: 0.75rem;
+            color: #cbd5e1;
+        }
+        .legal-section p {
+            color: #cbd5e1;
+        }
+        .trademark {
+            font-size: 0.8rem;
+            color: #475569;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🌌 NAV BAR -->
+    <header class="forge-header">
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none;"><span class="brand-name">IMMENSUM</span></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="https://github.com/velariastarfire/Immensum" target="_blank">GitHub</a>
+        </nav>
+    </header>
+
+    <!-- ⚖️ LEGAL BODY -->
+    <main class="legal-container">
+        <h1>Privacy Policy</h1>
+        <div class="meta-info">
+            <p><strong>Effective Date:</strong> June 1, 2026</p>
+            <p><strong>Developer:</strong> Velaria Starfire / Recursive Roots</p>
+        </div>
+
+        <section class="legal-section">
+            <p>Your privacy is paramount. Immensum for Google Sheets™ is designed to process high-precision calculations securely and transparently. This Privacy Policy outlines how data is handled.</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>1. Data Collection & Processing</h3>
+            <ul>
+                <li><strong>No Personal Data Stored:</strong> The Software does not collect, harvest, or permanently store any personal data, email addresses, or user credentials.</li>
+                <li><strong>Calculation Data Transmitted:</strong> To perform arbitrary-precision mathematics, numeric inputs from your spreadsheet are temporarily transmitted to our secure computation engine.</li>
+                <li><strong>Data Transience:</strong> This numeric data is processed entirely in-memory. Once the calculation is complete and the text string result is returned to your Google Sheet, the data is instantly dropped from memory. We do not log or store your spreadsheet inputs.</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>2. Google Workspace Permissions (Scopes)</h3>
+            <p>The Software requests specific permissions via Google OAuth solely to execute its core functions:</p>
+            <ul>
+                <li><strong>View and manage spreadsheets this application is installed in:</strong> Required to read the numeric inputs you pass to our custom formulas and write back the exact text results.</li>
+                <li><strong>Connect to an external service:</strong> Required to send numeric inputs to our secure server-side engine for processing.</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>3. Third-Party Sharing</h3>
+            <p>We do not sell, trade, or share your data with any third parties. Your data never leaves our secure execution path.</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>4. Contact & Support</h3>
+            <p>For questions regarding this policy, please open an issue at our official support repository: <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" style="color: #00d4ff;">GitHub Issues</a></p>
+        </section>
+
+        <p class="trademark"><em>Google Sheets™ is a trademark of Google LLC.</em></p>
+    </main>
+
+    <!-- 🛠️ FOOTER -->
+    <footer class="forge-footer">
+        <p>&copy; 2026 Immensum. Powered by Velaria Starfire. Bridging the Impossible.</p>
+    </footer>
+
+</body>
+</html>

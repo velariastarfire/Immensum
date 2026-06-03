@@ -54,6 +54,41 @@ body {
     color: #00d4ff; /* Dynamic cyan glow link hover */
 }
 
+/* 🛠️ Main Workspace Constraints (The Missing Engine Piece) */
+.module-container {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.module-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.module-header h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #ffd700 30%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.screenshot-card {
+    background: linear-gradient(145deg, #13112c, #0f0d24);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.screenshot-caption {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 /* 4. The Hero Spotlight Banner */
 .hero-section {
     text-align: center;

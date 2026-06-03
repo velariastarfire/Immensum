@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* 1. Resetting the canvas for a clean template */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Fixed the double box-box-sizing typo here! */

@@ -6,7 +6,6 @@
     <title>Google Sheets Module | Immensum</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Dedicated styles for our Module Showcase */
         .module-container {
             max-width: 1100px;
             margin: 4rem auto;
@@ -47,8 +46,21 @@
             font-size: 1.1rem;
             line-height: 1.6;
         }
-        .screenshot-caption strong {
-            color: #ffd700;
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        .pricing-card {
+            background: linear-gradient(145deg, #18153c, #0f0d24);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            width: 300px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            text-align: center;
         }
     </style>
 </head>
@@ -61,66 +73,71 @@
         </div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="index.html#features">Modules</a>
+            <a href="#pricing">Pricing</a>
             <a href="https://github.com/velariastarfire/Immensum" target="_blank">GitHub</a>
         </nav>
     </header>
 
-    <!-- 🛠️ MODULE SHOWCASE -->
+    <!-- 🛠️ MODULE WORKSPACE -->
     <main class="module-container">
-        <section id="pricing" class="pricing-section" style="margin-top: 6rem; text-align: center;">
-            <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 1rem;">Select Your Core Access</h2>
-            <p style="color: #94a3b8; margin-bottom: 3rem;">Deploy absolute mathematical fidelity across your enterprise workspaces.</p>
-            
-            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                
-                <div class="pricing-card" style="background: linear-gradient(145deg, #18153c, #0f0d24); border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 20px; padding: 3rem 2.5rem; width: 320px; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
-                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00d4ff, #0072ff); color: #ffffff; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px;">Risk Free</span>
-                    <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Monthly Core</h3>
-                    <div style="font-size: 3rem; font-weight: 800; color: #00d4ff; margin-bottom: 0.5rem;">$34<span style="font-size: 1rem; color: #64748b;">/mo</span></div>
-                    <p style="color: #ffd700; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">3-Day Free Trial Includes Full Access</p>
-                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Perfect for short-term data validation, advanced financial analysis, and cryptographic modeling projects.</p>
-                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box;">Start Free Trial</a>
-                </div>
-
-                <div class="pricing-card" style="background: linear-gradient(145deg, #1c184a, #0f0d24); border: 2px solid rgba(255, 215, 0, 0.4); border-radius: 20px; padding: 3rem 2.5rem; width: 320px; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.1);">
-                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px;">Best Value</span>
-                    <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Annual Engine</h3>
-                    <div style="font-size: 3rem; font-weight: 800; color: #ffd700; margin-bottom: 0.5rem;">$375<span style="font-size: 1rem; color: #64748b;">/yr</span></div>
-                    <p style="color: #00d4ff; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">Save over $30 annually</p>
-                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Designed for continuous data architecture workflows and production enterprise environments requiring infinite limits.</p>
-                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box; background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a;">Activate Annual Key</a>
-                </div>
-
-            </div>
-        </section>
         
         <div class="module-header">
             <h1>Immensum Core: Google Sheets™</h1>
             <p class="screenshot-caption">The infinite numerical engine, natively integrated alongside your spreadsheet datasets.</p>
         </div>
 
+        <!-- 🎥 THE LIVE INTERFACE DEMO VIDEO (Up Front) -->
+        <section style="max-width: 850px; margin: 0 auto 5rem auto; text-align: center;">
+            <div style="position: relative; border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 16px; padding: 10px; background: rgba(19, 17, 44, 0.6); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 212, 255, 0.15); backdrop-filter: blur(8px);">
+                <video controls width="100%" poster="Assets/image_a43660.png" style="border-radius: 10px; display: block;">
+                    <source src="Assets/immensum-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
         <!-- 📸 SCREENSHOT & VISUAL WORKSPACE GALLERY -->
         <section class="gallery-grid">
-            
-            <!-- Live Console Environment -->
             <div class="screenshot-card">
-                <!-- Once you save the screenshot to your repo, link it here! -->
-                <img src="Assets/ScreenShotSafe.jpg" alt="Immensum Console inside Google Sheets">
+                <img src="Assets/image_a43660.png" alt="Immensum Console inside Google Sheets">
                 <div class="screenshot-caption">
-                    <h3>The Native Interface Console</h3>
+                    <h3 style="color: #fff; margin-bottom: 0.5rem;">The Native Interface Console</h3>
                     <p>Manage licensing encryption protocols, operational controls, and active data streams cleanly inside the sidebar workspace. Designed to integrate flawlessly without interrupting your cell layouts.</p>
                 </div>
             </div>
 
-            <!-- Mathematical Precision Demo -->
             <div class="screenshot-card">
                 <div class="screenshot-caption">
-                    <h3>⚡ Breaking the 64-Bit Barrier</h3>
+                    <h3 style="color: #fff; margin-bottom: 0.5rem;">⚡ Breaking the 64-Bit Barrier</h3>
                     <p>Standard spreadsheet macros round microscopic precision points or massive integers down to zero or overflow errors. Immensum forces the engine to return <strong>absolute mathematical fidelity</strong> across all basic arithmetic operations, handling strings of infinite characters perfectly.</p>
                 </div>
             </div>
+        </section>
 
+        <!-- 💎 TRANSPARENT SUBSCRIPTION TIERS -->
+        <section id="pricing" style="margin: 6rem 0; text-align: center;">
+            <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 0.5rem;">Select Your Core Access</h2>
+            <p style="color: #94a3b8; margin-bottom: 3rem;">Deploy absolute mathematical fidelity across your workspaces.</p>
+            
+            <div class="pricing-container">
+                <!-- Monthly -->
+                <div class="pricing-card" style="border: 2px solid rgba(0, 212, 255, 0.3);">
+                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00d4ff, #0072ff); color: #ffffff; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px;">Risk Free</span>
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Monthly Core</h3>
+                    <div style="font-size: 3rem; font-weight: 800; color: #00d4ff; margin-bottom: 0.5rem;">$34<span style="font-size: 1rem; color: #64748b;">/mo</span></div>
+                    <p style="color: #ffd700; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">3-Day Free Trial Included</p>
+                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none;">Start Free Trial</a>
+                </div>
+
+                <!-- Annual -->
+                <div class="pricing-card" style="border: 2px solid rgba(255, 215, 0, 0.4); background: linear-gradient(145deg, #1c184a, #0f0d24);">
+                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px;">Best Value</span>
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Annual Engine</h3>
+                    <div style="font-size: 3rem; font-weight: 800; color: #ffd700; margin-bottom: 0.5rem;">$375<span style="font-size: 1rem; color: #64748b;">/yr</span></div>
+                    <p style="color: #00d4ff; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">Save over $30 annually</p>
+                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a;">Activate Annual</a>
+                </div>
+            </div>
         </section>
 
     </main>

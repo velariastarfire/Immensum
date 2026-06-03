@@ -223,12 +223,10 @@ body {
     font-weight: bold;
 }
 
-/* Securely closing down your badge token element right here */
 .operation-badge {
     font-weight: bold;
     color: #ffd700;
 }
-
 
 /* ==========================================================================
    🌌 IMMENSUM MODULE WORKSPACE STYLES (Google Sheets & Future Expansions)
@@ -282,6 +280,15 @@ body {
 }
 
 /* 🎫 Custom Variant Cards */
+.pricing-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    width: 320px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
 .pricing-card.monthly-variant {
     background: linear-gradient(145deg, #18153c, #0f0d24);
     border: 2px solid rgba(0, 212, 255, 0.3);
@@ -290,6 +297,7 @@ body {
 .pricing-card.annual-variant {
     background: linear-gradient(145deg, #1c184a, #0f0d24);
     border: 2px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.1);
 }
 
 /* 🏷️ Badge Overlays */

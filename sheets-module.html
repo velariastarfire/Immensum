@@ -111,60 +111,53 @@
 
     </main>
 
-    <!-- 💎 THE NO-SCROLL TRANSPARENT POPUP OVERLAY -->
-    <div id="pricingModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(6, 5, 18, 0.9); backdrop-filter: blur(12px); z-index: 1000; justify-content: center; align-items: center;">
-        <div style="background: linear-gradient(145deg, #18153c, #0f0d24); border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 24px; padding: 3rem; width: 90%; max-width: 780px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.8);">
+<!-- 💎 IMMENSUM SUBSCRIPTION TIERS (Hidden until clicked) -->
+        <section id="pricing" class="pricing-section" style="display: none; margin-top: 4rem; margin-bottom: 4rem; text-align: center;">
+            <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 1rem;">Select Your Core Access</h2>
+            <p style="color: #94a3b8; margin-bottom: 3rem;">Deploy absolute mathematical fidelity across your enterprise workspaces.</p>
             
-            <!-- Close Modal 'X' -->
-            <button onclick="closePricing()" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: #64748b; font-size: 2rem; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#64748b'">&times;</button>
-            
-            <div style="text-align: center; margin-bottom: 2.5rem;">
-                <h2 style="color: #ffffff; font-size: 2.2rem; margin-bottom: 0.5rem;">Transparent Core Access</h2>
-                <p style="color: #94a3b8;">Straightforward licensing tiers. No hidden hoops, no tracking, no gimmicks.</p>
-            </div>
-
-            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
                 
                 <!-- Monthly Card -->
-                <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 16px; padding: 2.5rem 2rem; width: 290px; text-align: center; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00d4ff, #0072ff); color: #ffffff; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px; white-space: nowrap;">Risk Free</span>
-                    <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 1rem;">Monthly Core</h3>
-                    <div style="font-size: 2.8rem; font-weight: 800; color: #00d4ff; margin-bottom: 0.5rem;">$34<span style="font-size: 1rem; color: #64748b;">/mo</span></div>
-                    <p style="color: #ffd700; font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem;">3-Day Free Trial Included</p>
-                    <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 2rem; line-height: 1.5;">Perfect for short-term data validation, financial analysis, and cryptographic projects.</p>
-                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; padding: 0.7rem; font-weight: bold;">Start Free Trial</a>
+                <div class="pricing-card" style="background: linear-gradient(145deg, #18153c, #0f0d24); border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 20px; padding: 3rem 2.5rem; width: 320px; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
+                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00d4ff, #0072ff); color: #ffffff; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px;">Risk Free</span>
+                    <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Monthly Core</h3>
+                    <div style="font-size: 3rem; font-weight: 800; color: #00d4ff; margin-bottom: 0.5rem;">$34<span style="font-size: 1rem; color: #64748b;">/mo</span></div>
+                    <p style="color: #ffd700; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">3-Day Free Trial Includes Full Access</p>
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Perfect for short-term data validation, advanced financial analysis, and cryptographic modeling projects.</p>
+                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box;">Start Free Trial</a>
                 </div>
 
                 <!-- Annual Card -->
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 16px; padding: 2.5rem 2rem; width: 290px; text-align: center; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px; white-space: nowrap;">Best Value</span>
-                    <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 1rem;">Annual Engine</h3>
-                    <div style="font-size: 2.8rem; font-weight: 800; color: #ffd700; margin-bottom: 0.5rem;">$375<span style="font-size: 1rem; color: #64748b;">/yr</span></div>
-                    <p style="color: #00d4ff; font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem;">Save over $30 annually</p>
-                    <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 2rem; line-height: 1.5;">Designed for continuous data architecture workflows and production enterprise environments.</p>
-                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; padding: 0.7rem; background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a; font-weight: bold;">Activate Annual Key</a>
+                <div class="pricing-card" style="background: linear-gradient(145deg, #1c184a, #0f0d24); border: 2px solid rgba(255, 215, 0, 0.4); border-radius: 20px; padding: 3rem 2.5rem; width: 320px; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.1);">
+                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px;">Best Value</span>
+                    <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Annual Engine</h3>
+                    <div style="font-size: 3rem; font-weight: 800; color: #ffd700; margin-bottom: 0.5rem;">$375<span style="font-size: 1rem; color: #64748b;">/yr</span></div>
+                    <p style="color: #00d4ff; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">Save over $30 annually</p>
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Designed for continuous data architecture workflows and production enterprise environments requiring infinite limits.</p>
+                    <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box; background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a;">Activate Annual Key</a>
                 </div>
 
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- 🧠 JAVA MODAL CONTROLLER ENGINE -->
-    <script>
-        function openPricing() {
-            document.getElementById('pricingModal').style.display = 'flex';
-        }
-        function closePricing() {
-            document.getElementById('pricingModal').style.display = 'none';
-        }
-        // Closes if they click outside the active card frame area
-        window.onclick = function(event) {
-            let modal = document.getElementById('pricingModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+        <!-- 🧠 THE INTERACTIVE TOGGLE SCRIPT -->
+        <script>
+            function togglePricing() {
+                var pricingSection = document.getElementById('pricing');
+                var pricingButton = document.getElementById('pricingToggleBtn');
+                
+                if (pricingSection.style.display === 'none') {
+                    pricingSection.style.display = 'block';
+                    pricingButton.textContent = 'Hide Pricing Tiers';
+                    // Smoothly scroll down to show the newly revealed cards
+                    pricingSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    pricingSection.style.display = 'none';
+                    pricingButton.textContent = 'View Transparent Pricing';
+                }
             }
-        }
-    </script>
+        </script>
 
     <!-- 🛠️ FOOTER -->
     <footer class="forge-footer">

@@ -34,6 +34,7 @@
             border-radius: 16px;
             padding: 1.5rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
         }
         .screenshot-card img {
             width: 100%;
@@ -66,38 +67,30 @@
 </head>
 <body>
 
-    <!-- 🌌 NAV BAR: Sleek, unified header -->
     <header class="forge-header">
         <div class="logo-container">
-            <!-- Our freshly finalized badge template will live here -->
             <span class="brand-name">IMMENSUM</span>
         </div>
         <nav class="nav-links">
-            <a href="sheets-module.html">Sheets Module</a> <!-- LINK 1: Placed right in the top nav menu! -->
+            <a href="sheets-module.html">Sheets Module</a>
             <a href="#showcase">Live Proof</a>
             <a href="https://github.com/velariastarfire/Immensum" target="_blank">GitHub</a>
         </nav>
     </header>
 
-    <main>
-        <!-- 🚀 HERO SECTION: The First Impression -->
-        <section class="hero-section">
+    <main class="module-container">
+        
+        <section class="hero-section" style="margin-bottom: 4rem;">
             <div class="hero-content">
                 <h1>The Infinite, Made Calculable.</h1>
                 <p>A high-precision numerical engine designed to handle massive integers far beyond the native processing limits of traditional spreadsheets.</p>
                 <div class="cta-buttons">
-                    <!-- LINK 2: Placed right inside your main primary button! -->
                     <a href="sheets-module.html" class="btn-primary">Google Sheets™</a>
                     <a href="#showcase" class="btn-secondary">View the Proof</a>
                 </div>
             </div>
         </section>
 
-    <!-- 🛠️ MODULE WORKSPACE -->
-    <main class="module-container">
-        
-
-        <!-- 🎥 THE LIVE INTERFACE DEMO VIDEO (Up Front) -->
         <section style="max-width: 850px; margin: 0 auto 5rem auto; text-align: center;">
             <div style="position: relative; border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 16px; padding: 10px; background: rgba(19, 17, 44, 0.6); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 212, 255, 0.15); backdrop-filter: blur(8px);">
                 <video controls width="100%" poster="Assets/image_a43660.png" style="border-radius: 10px; display: block;">
@@ -107,32 +100,27 @@
             </div>
         </section>
 
-<section style="max-width: 850px; margin: 0 auto 5rem auto; text-align: center;">
+        <section style="max-width: 850px; margin: 0 auto 5rem auto; text-align: center;">
             <div class="screenshot-card">
                 <div class="screenshot-caption">
                     <h3 style="color: #fff; margin-bottom: 0.5rem;">⚡ Breaking the 64-Bit Barrier</h3>
                     <p>Standard spreadsheet macros round microscopic precision points or massive integers down to zero or overflow errors. Immensum forces the engine to return <strong>absolute mathematical fidelity</strong> across all basic arithmetic operations, handling strings of infinite characters perfectly.</p>
                 </div>
             </div>
-
-
-        <!-- 📸 SCREENSHOT & VISUAL WORKSPACE GALLERY -->
-        <section class="gallery-grid">
-                <img src="Assets/ScreenShotSafe.jpg" alt="🧮 Immensum Console inside Google Sheets">
         </section>
 
- 	<div class="screenshot-card">
-		<div class="screenshot-caption">
+        <section class="gallery-grid">
+            <div class="screenshot-card">
+                <img src="Assets/ScreenShotSafe.jpg" alt="🧮 Immensum Console inside Google Sheets">
+                <div class="screenshot-caption">
                     <h3 style="color: #fff; margin-bottom: 0.5rem;">The Native Interface Console</h3>
                     <p>Manage licensing encryption protocols, operational controls, and active data streams cleanly inside the sidebar workspace. Designed to integrate flawlessly without interrupting your cell layouts.</p>
                 </div>
             </div>
-
-
+        </section>
 
     </main>
 
-    <!-- 🛠️ FOOTER -->
     <footer class="forge-footer">
         <div class="footer-content">
             <p>&copy; 2026 Immensum. Powered by Velaria Starfire. Bridging the Impossible.</p>

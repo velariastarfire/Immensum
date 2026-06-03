@@ -101,7 +101,7 @@ body {
     font-weight: 800;
     margin-bottom: 1rem;
     /* Beautiful gradient text pulling from your sidebar theme */
-    background: linear-gradient(135deg, #ffd700 30%, #00d4ff 100%);
+    background: linear-gradient(135deg, #ffd700 30%, #fff4ba 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

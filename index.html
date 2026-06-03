@@ -3,126 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immensum | The Infinite, Made Calculable</title>
-    <!-- We will link our glowing cosmic stylesheet here later -->
+    <title>Google Sheets Module | Immensum</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .module-container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        .module-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .module-header h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #ffd700 30%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        .screenshot-card {
+            background: linear-gradient(145deg, #13112c, #0f0d24);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .screenshot-card img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 1.5rem;
+        }
+        .screenshot-caption {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        .pricing-card {
+            background: linear-gradient(145deg, #18153c, #0f0d24);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            width: 300px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- 🌌 NAV BAR: Sleek, unified header -->
+    <!-- 🌌 NAV BAR -->
     <header class="forge-header">
         <div class="logo-container">
-            <!-- Our freshly finalized badge template will live here -->
-            <span class="brand-name">IMMENSUM</span>
+            <a href="index.html" style="text-decoration: none;"><span class="brand-name">IMMENSUM</span></a>
         </div>
         <nav class="nav-links">
-            <a href="sheets-module.html">Sheets Module</a> <!-- LINK 1: Placed right in the top nav menu! -->
-            <a href="#showcase">Live Proof</a>
+            <a href="index.html">Home</a>
+            <a href="#pricing">Pricing</a>
             <a href="https://github.com/velariastarfire/Immensum" target="_blank">GitHub</a>
         </nav>
     </header>
 
-    <main>
-        <!-- 🚀 HERO SECTION: The First Impression -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>The Infinite, Made Calculable.</h1>
-                <p>A high-precision numerical engine designed to handle massive integers far beyond the native processing limits of traditional spreadsheets.</p>
-                <div class="cta-buttons">
-                    <!-- LINK 2: Placed right inside your main primary button! -->
-                    <a href="sheets-module.html" class="btn-primary">Explore Sheets Module</a>
-                    <a href="#showcase" class="btn-secondary">View the Proof</a>
+    <!-- 🛠️ MODULE WORKSPACE -->
+    <main class="module-container">
+        
+        <div class="module-header">
+            <h1>Immensum Core: Google Sheets™</h1>
+            <p class="screenshot-caption">The infinite numerical engine, natively integrated alongside your spreadsheet datasets.</p>
+        </div>
+
+        <!-- 🎥 THE LIVE INTERFACE DEMO VIDEO (Up Front) -->
+        <section style="max-width: 850px; margin: 0 auto 5rem auto; text-align: center;">
+            <div style="position: relative; border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 16px; padding: 10px; background: rgba(19, 17, 44, 0.6); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 212, 255, 0.15); backdrop-filter: blur(8px);">
+                <video controls width="100%" poster="Assets/image_a43660.png" style="border-radius: 10px; display: block;">
+                    <source src="Assets/immensum-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- 📸 SCREENSHOT & VISUAL WORKSPACE GALLERY -->
+        <section class="gallery-grid">
+            <div class="screenshot-card">
+                <img src="Assets/ScreenShotSafe.jpg" alt="Immensum Console inside Google Sheets">
+                <div class="screenshot-caption">
+                    <h3 style="color: #fff; margin-bottom: 0.5rem;">The Native Interface Console</h3>
+                    <p>Manage licensing encryption protocols, operational controls, and active data streams cleanly inside the sidebar workspace. Designed to integrate flawlessly without interrupting your cell layouts.</p>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-caption">
+                    <h3 style="color: #fff; margin-bottom: 0.5rem;">⚡ Breaking the 64-Bit Barrier</h3>
+                    <p>Standard spreadsheet macros round microscopic precision points or massive integers down to zero or overflow errors. Immensum forces the engine to return <strong>absolute mathematical fidelity</strong> across all basic arithmetic operations, handling strings of infinite characters perfectly.</p>
                 </div>
             </div>
         </section>
-        
-        <!-- ⚙️ FEATURES: Core Engine Competencies -->
-        <section id="features" class="features-grid">
-            <h2>Engine Core Features</h2>
-            <div class="feature-card">
-                <h3>Infinite Precision Arithmetic</h3>
-                <p>Perform flawless calculations on numbers of arbitrary length without hitting standard 64-bit float limitations.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Zero Data Distortion</h3>
-                <p>Prevents spreadsheets from truncating large numbers or forcing them into unreadable scientific notation.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Secure Execution</h3>
-                <p>Processes inputs within a protected black-box environment, returning exact answers directly to your sheet as crisp text strings.</p>
-            </div>
-        </section>
 
-        <!-- 📊 SHOWCASE & STRESS TESTS: Where things break beautifully -->
-        <section id="showcase" class="data-showcase">
-            <h2>Forged in the Extremes</h2>
-            <p>See how Immensum maintains absolute mathematical fidelity—digit by digit—where ordinary spreadsheet cells overflow.</p>
-            
-            <!-- Live Data Grid Container -->
-<!-- 📊 Live Data Proof Grid -->
-            <div class="interactive-grid-wrapper">
-                <table class="proof-table">
-                    <thead>
-                        <tr>
-                            <th>Operation</th>
-                            <th>Value A</th>
-                            <th></th>
-                            <th>Value B</th>
-                            <th></th>
-                            <th>Immensum Exact Output</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="operation-badge">Addition</span></td>
-                            <td>10000000000000000000</td>
-                            <td class="operation-badge">+</td>
-                            <td>.00000000000000000001</td>
-                            <td>=</td>
-                            <td><span class="exact-output">10000000000000000000.00000000000000000001</span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="operation-badge">Subtraction</span></td>
-                            <td>10000000000000000000</td>
-                            <td class="operation-badge">-</td>
-                            <td>.00000000000000000001</td>
-                            <td>=</td>
-                            <td><span class="exact-output">9999999999999999999.99999999999999999999</span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="operation-badge">Multiplication</span></td>
-                            <td>10000000000000000000</td>
-                            <td class="operation-badge">*</td>
-                            <td>.00000000000000000001</td>
-                            <td>=</td>
-                            <td><span class="exact-output">1</span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="operation-badge">Division</span></td>
-                            <td>10000000000000000000</td>
-                            <td class="operation-badge">/</td>
-                            <td>.00000000000000000001</td>
-                            <td>=</td>
-                            <td><span class="exact-output">1000000000000000000000000000000000000000</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+
     </main>
 
-<!-- 🛠️ COMPLIANT FORGE FOOTER -->
+    <!-- 🛠️ FOOTER -->
     <footer class="forge-footer">
         <div class="footer-content">
             <p>&copy; 2026 Immensum. Powered by Velaria Starfire. Bridging the Impossible.</p>
-            
-            <!-- ⚖️ Google Audit Compliance Links -->
             <nav class="legal-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <span class="divider">|</span>
                 <a href="terms.html">Terms of Service</a>
                 <span class="divider">|</span>
-                <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" rel="noopener">Support & Issues</a>
+                <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank">Support</a>
             </nav>
         </div>
     </footer>

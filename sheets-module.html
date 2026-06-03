@@ -47,18 +47,34 @@
             font-size: 1.1rem;
             line-height: 1.6;
         }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        .pricing-card {
+            background: linear-gradient(145deg, #18153c, #0f0d24);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            width: 300px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <!-- 🌌 NAV BAR -->
+    
+<!-- 🌌 NAV BAR -->
     <header class="forge-header">
         <div class="logo-container">
             <a href="index.html" style="text-decoration: none;"><span class="brand-name">IMMENSUM</span></a>
         </div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <!-- 🎛️ Click to trigger popup instantly, no scroll -->
             <a href="#pricing">Pricing</a>
             <a href="https://github.com/velariastarfire/Immensum" target="_blank">GitHub</a>
         </nav>
@@ -69,7 +85,8 @@
         
         <div class="module-header">
             <h1>Immensum Core: Google Sheets™</h1>
-            <p class="screenshot-caption">The infinite numerical engine, natively integrated alongside your spreadsheet datasets.</p>
+            <!-- ✍️ SPICE TWEAK: Dropped corporate "traditional datasets" for simple, heavy reality -->
+            <p class="screenshot-caption">Run massive math natively inside your spreadsheet cells. Infinite precision. Zero setup.</p>
         </div>
 
         <!-- 🎥 THE LIVE INTERFACE DEMO VIDEO (Up Front) -->
@@ -86,8 +103,9 @@
         <section style="max-width: 850px; margin: 0 auto 2rem auto; text-align: center;">
             <div class="screenshot-card">
                 <div class="screenshot-caption">
+                    <!-- ✍️ SPICE TWEAK: Straightforward breakdown of the 64-bit problem -->
                     <h3 style="color: #fff; margin-bottom: 0.5rem;">⚡ Breaking the 64-Bit Barrier</h3>
-                    <p>Standard spreadsheet macros round microscopic precision points or massive integers down to zero or overflow errors. Immensum forces the engine to return <strong>absolute mathematical fidelity</strong> across all basic arithmetic operations, handling strings of infinite characters perfectly.</p>
+                    <p>Standard spreadsheets force giant integers and tiny micro-decimals to round down, warp, or throw ugly <code>#NUM!</code> overflow errors. Immensum overrides that limitation entirely, returning <strong>absolute mathematical accuracy</strong> on numbers of any length, handled as perfect data strings.</p>
                 </div>
             </div>
         </section>
@@ -96,16 +114,17 @@
         <section style="max-width: 850px; margin: 0 auto 2rem auto; text-align: center;">
             <div class="screenshot-card">
                 <div class="screenshot-caption">
-                    <h3 style="color: #fff; margin-bottom: 0.5rem;">🧠 The Native Interface Console</h3>
-                    <p>Manage licensing encryption protocols, operational controls, and active data streams cleanly inside the sidebar workspace. Designed to integrate flawlessly without interrupting your cell layouts.</p>
+                    <!-- ✍️ SPICE TWEAK: Cut institutional speak for clean, functional copy -->
+                    <h3 style="color: #fff; margin-bottom: 0.5rem;">🧠 The Native Sidebar Console</h3>
+                    <p>Drop your activation key into the sidebar, control your computation settings, and run live data streams right next to your grid. It is built to blend seamlessly into your daily workflow without messing up your cell layouts or breaking your formulas.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 💎 IMMENSUM SUBSCRIPTION TIERS (Nested perfectly at the bottom) -->
+        <!-- 💎 IMMENSUM SUBSCRIPTION TIERS -->
         <section id="pricing" class="pricing-section" style="margin-top: 6rem; margin-bottom: 4rem; text-align: center;">
-            <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 1rem;">Select Your Core Access</h2>
-            <p style="color: #94a3b8; margin-bottom: 3rem;">Deploy absolute mathematical fidelity across your enterprise workspaces.</p>
+            <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 1rem;">Get Core Access</h2>
+            <p style="color: #94a3b8; margin-bottom: 3rem;">No hidden limits. No corporate runarounds. Just pure computation power.</p>
             
             <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
                 
@@ -114,8 +133,9 @@
                     <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00d4ff, #0072ff); color: #ffffff; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.4rem 1.2rem; border-radius: 50px;">Risk Free</span>
                     <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Monthly Core</h3>
                     <div style="font-size: 3rem; font-weight: 800; color: #00d4ff; margin-bottom: 0.5rem;">$34<span style="font-size: 1rem; color: #64748b;">/mo</span></div>
-                    <p style="color: #ffd700; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">3-Day Free Trial Includes Full Access</p>
-                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Perfect for short-term data validation, advanced financial analysis, and cryptographic modeling projects.</p>
+                    <p style="color: #ffd700; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">3-Day Free Trial • Cancel Anytime</p>
+                    <!-- ✍️ SPICE TWEAK: Plain English use cases for everyone from students to financial devs -->
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Ideal for heavy financial audits, advanced modeling, crypto string testing, or pushing large data numbers over the finish line.</p>
                     <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box;">Start Free Trial</a>
                 </div>
 
@@ -125,7 +145,8 @@
                     <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 1rem;">Annual Engine</h3>
                     <div style="font-size: 3rem; font-weight: 800; color: #ffd700; margin-bottom: 0.5rem;">$375<span style="font-size: 1rem; color: #64748b;">/yr</span></div>
                     <p style="color: #00d4ff; font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem;">Save over $30 annually</p>
-                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Designed for continuous data architecture workflows and production enterprise environments requiring infinite limits.</p>
+                    <!-- ✍️ SPICE TWEAK: Direct value statement -->
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">Built for full-scale operations, production pipelines, and developers who need infinite math limits running 24/7.</p>
                     <a href="https://github.com/velariastarfire/Immensum/issues" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box; background: linear-gradient(135deg, #ffd700, #ff9900); color: #0b091a;">Activate Annual Key</a>
                 </div>
 

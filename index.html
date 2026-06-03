@@ -59,8 +59,54 @@
             <p>See how Immensum maintains absolute mathematical fidelity—digit by digit—where ordinary spreadsheet cells overflow.</p>
             
             <!-- Live Data Grid Container -->
+<!-- 📊 Live Data Proof Grid -->
             <div class="interactive-grid-wrapper">
-                <!-- Data tables and stress-test interactive rows go here -->
+                <table class="proof-table">
+                    <thead>
+                        <tr>
+                            <th>Operation</th>
+                            <th>Value A</th>
+                            <th></th>
+                            <th>Value B</th>
+                            <th></th>
+                            <th>Immensum Exact Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="operation-badge">Addition</span></td>
+                            <td>10000000000000000000</td>
+                            <td class="operation-badge">+</td>
+                            <td>.00000000000000000001</td>
+                            <td>=</td>
+                            <td><span class="exact-output">10000000000000000000.00000000000000000001</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="operation-badge">Subtraction</span></td>
+                            <td>10000000000000000000</td>
+                            <td class="operation-badge">-</td>
+                            <td>.00000000000000000001</td>
+                            <td>=</td>
+                            <td><span class="exact-output">9999999999999999999.99999999999999999999</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="operation-badge">Multiplication</span></td>
+                            <td>10000000000000000000</td>
+                            <td class="operation-badge">*</td>
+                            <td>.00000000000000000001</td>
+                            <td>=</td>
+                            <td><span class="exact-output">1</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="operation-badge">Division</span></td>
+                            <td>10000000000000000000</td>
+                            <td class="operation-badge">/</td>
+                            <td>.00000000000000000001</td>
+                            <td>=</td>
+                            <td><span class="exact-output">1000000000000000000000000000000000000000</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>

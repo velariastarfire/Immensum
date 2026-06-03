@@ -109,10 +109,8 @@
             </button>
         </div>
 
-    </main>
-
-<!-- 💎 IMMENSUM SUBSCRIPTION TIERS (Hidden until clicked) -->
-        <section id="pricing" class="pricing-section" style="display: none; margin-top: 4rem; margin-bottom: 4rem; text-align: center;">
+        <!-- 💎 IMMENSUM SUBSCRIPTION TIERS (Nested perfectly at the bottom) -->
+        <section id="pricing" class="pricing-section" style="margin-top: 6rem; margin-bottom: 4rem; text-align: center;">
             <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 1rem;">Select Your Core Access</h2>
             <p style="color: #94a3b8; margin-bottom: 3rem;">Deploy absolute mathematical fidelity across your enterprise workspaces.</p>
             
@@ -140,25 +138,8 @@
 
             </div>
         </section>
-
-        <!-- 🧠 THE INTERACTIVE TOGGLE SCRIPT -->
-        <script>
-            function togglePricing() {
-                var pricingSection = document.getElementById('pricing');
-                var pricingButton = document.getElementById('pricingToggleBtn');
-                
-                if (pricingSection.style.display === 'none') {
-                    pricingSection.style.display = 'block';
-                    pricingButton.textContent = 'Hide Pricing Tiers';
-                    // Smoothly scroll down to show the newly revealed cards
-                    pricingSection.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    pricingSection.style.display = 'none';
-                    pricingButton.textContent = 'View Transparent Pricing';
-                }
-            }
-        </script>
-
+        
+    </main>
     <!-- 🛠️ FOOTER -->
     <footer class="forge-footer">
         <div class="footer-content">

@@ -4,69 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Sheets Module | Immensum</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .module-container {
-            max-width: 1100px;
-            margin: 4rem auto;
-            padding: 0 .2rem;
-        }
-        .module-header {
-            text-align: center;
-            margin-bottom: .2rem;
-        }
-        .module-header h1 {
-            font-size: 3rem;
-            background: linear-gradient(135deg, #ffd700 30%, #fff4ba 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            margin: 4rem 0;
-        }
-        .screenshot-card {
-            background: linear-gradient(145deg, #13112c, #0f0d24);
-            border: 1px solid rgba(0, 212, 255, 0.1);
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            margin-bottom: 2rem;
-        }
-        .screenshot-card img {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin-bottom: 1.5rem;
-        }
-        .screenshot-caption {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .pricing-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-        .pricing-card {
-            background: linear-gradient(145deg, #18153c, #0f0d24);
-            border-radius: 20px;
-            padding: 3rem 2.5rem;
-            width: 300px;
-            position: relative;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
-
     <header class="forge-header">
         <div class="logo-container">
             <span class="brand-name">IMMENSUM</span>
@@ -90,7 +30,9 @@
             </div>
         </section>
 
-        <section style="max-width: 850px; margin: 0 auto 5rem auto; text-align: center;">
+
+        <!-- 🎥 THE LIVE INTERFACE DEMO VIDEO (Up Front) -->
+        <section style="max-width: 850px; margin: 0 auto 2rem auto; text-align: center;">
             <div style="position: relative; border: 2px solid rgba(0, 212, 255, 0.3); border-radius: 16px; padding: 10px; background: rgba(19, 17, 44, 0.6); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 212, 255, 0.15); backdrop-filter: blur(8px);">
                 <video controls width="100%" poster="Assets/ScreenShotSafe.jpg" style="border-radius: 10px; display: block;">
                     <source src="Assets/ImmensumPreviewSafe.mp4" type="video/mp4">
@@ -99,25 +41,27 @@
             </div>
         </section>
 
-        <section style="max-width: 850px; margin: 0 auto 5rem auto; text-align: center;">
+        <!-- DESCRIPTION BLOCK -->
+        <section style="max-width: 850px; margin: 0 auto 2rem auto; text-align: center;">
             <div class="screenshot-card">
                 <div class="screenshot-caption">
+                    <!-- ✍️ SPICE TWEAK: Straightforward breakdown of the 64-bit problem -->
                     <h3 style="color: #fff; margin-bottom: 0.5rem;">⚡ Breaking the 64-Bit Barrier</h3>
-                    <p>Standard spreadsheet macros round microscopic precision points or massive integers down to zero or overflow errors. Immensum forces the engine to return <strong>absolute mathematical fidelity</strong> across all basic arithmetic operations, handling strings of infinite characters perfectly.</p>
+                    <p>Standard spreadsheets force giant integers and tiny micro-decimals to round down, warp, or throw ugly <code>#NUM!</code> overflow errors. Immensum overrides that limitation entirely, returning <strong>absolute mathematical accuracy</strong> on numbers of any length, handled as perfect data strings.</p>
                 </div>
             </div>
         </section>
 
-        <section class="gallery-grid">
+        <!-- 📸 SCREENSHOT & VISUAL GALLERY -->
+        <section style="max-width: 850px; margin: 0 auto 2rem auto; text-align: center;">
             <div class="screenshot-card">
-                <img src="Assets/ScreenShotSafe.jpg" alt="🧮 Immensum Console inside Google Sheets">
                 <div class="screenshot-caption">
-                    <h3 style="color: #fff; margin-bottom: 0.5rem;">The Native Interface Console</h3>
-                    <p>Manage licensing encryption protocols, operational controls, and active data streams cleanly inside the sidebar workspace. Designed to integrate flawlessly without interrupting your cell layouts.</p>
+                    <!-- ✍️ SPICE TWEAK: Cut institutional speak for clean, functional copy -->
+                    <h3 style="color: #fff; margin-bottom: 0.5rem;">🧠 The Native Sidebar Console</h3>
+                    <p>Drop your activation key into the sidebar, control your computation settings, and run live data streams right next to your grid. It is built to blend seamlessly into your daily workflow without messing up your cell layouts or breaking your formulas.</p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="forge-footer">

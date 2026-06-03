@@ -1,10 +1,12 @@
-/* 🌌 IMMENSUM CORE DESIGN STYLE */
+/* ==========================================================================
+   🌌 IMMENSUM CORE DESIGN STYLE
+   ========================================================================== */
 
 /* 1. Resetting the canvas for a clean template */
 * {
     margin: 0;
     padding: 0;
-    box-box-sizing: border-box;
+    box-sizing: border-box; /* Fixed the double box-box-sizing typo here! */
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -221,7 +223,124 @@ body {
     font-weight: bold;
 }
 
+/* Securely closing down your badge token element right here */
 .operation-badge {
     font-weight: bold;
     color: #ffd700;
+}
+
+
+/* ==========================================================================
+   🌌 IMMENSUM MODULE WORKSPACE STYLES (Google Sheets & Future Expansions)
+   ========================================================================== */
+
+/* 🛠️ Video & Section Alignment Contenders */
+.showcase-section {
+    max-width: 850px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+.video-glow-frame {
+    position: relative;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 16px;
+    padding: 10px;
+    background: rgba(19, 17, 44, 0.6);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 212, 255, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+.video-glow-frame video {
+    border-radius: 10px;
+    display: block;
+}
+
+/* 💎 Pricing Grid Engine */
+.pricing-section {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-section p {
+    color: #94a3b8;
+    margin-bottom: 3rem;
+}
+
+.pricing-flex-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* 🎫 Custom Variant Cards */
+.pricing-card.monthly-variant {
+    background: linear-gradient(145deg, #18153c, #0f0d24);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.pricing-card.annual-variant {
+    background: linear-gradient(145deg, #1c184a, #0f0d24);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+/* 🏷️ Badge Overlays */
+.card-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.card-badge.blue-glow {
+    background: linear-gradient(135deg, #00d4ff, #0072ff);
+}
+
+.card-badge.gold-glow {
+    background: linear-gradient(135deg, #ffd700, #ff9900);
+    color: #0b091a;
+}
+
+/* 📊 Price Numbers & Text Styling */
+.price-display {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.price-display.cyan-text { color: #00d4ff; }
+.price-display.gold-text { color: #ffd700; }
+
+.price-sub {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.price-highlight-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-description {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
 }

@@ -58,12 +58,12 @@ body {
 .module-container {
     max-width: 1100px;
     margin: 4rem auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .module-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .module-header h1 {

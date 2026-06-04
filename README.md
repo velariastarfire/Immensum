@@ -35,5 +35,5 @@ Perfect for advanced cryptography data, massive financial ledgers, scientific da
 *Google Sheets™ is a trademark of Google LLC. Immensum for Google Sheets™ is an independent software tool and is not affiliated with, endorsed by, or connected to Google LLC.*
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/velariastarfire/Immensum/refs/heads/main/Assets/Logo%20256.png" alt="Immensum Logo" width="50" style="border-radius: 15px;"/>
+  <img src="https://raw.githubusercontent.com/velariastarfire/Immensum/refs/heads/main/Assets/Logo_96.png" alt="Immensum Logo" width="50" style="border-radius: 15px;"/>
 </p>

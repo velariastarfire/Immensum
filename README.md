@@ -1,8 +1,8 @@
 # Immensum Engine
 
-> The infinite, made calculable. 
+> The infinite, made calculable.
 
-Immensum Engine is a high-precision numerical engine designed to handle massive integers far beyond the native processing limits of traditional spreadsheets. By computing arbitrary-precision inputs inside a secure server-side core, Immensum ensures your data maintains absolute mathematical fidelity—digit by digit—with zero rounding, distortion, or overflow errors.
+Immensum Engine is a high-precision numerical engine designed to handle massive integers far beyond the native processing limits of traditional spreadsheets. By computing arbitrary-precision inputs inside a secure server-side core, Immensum Engine ensures your data maintains absolute mathematical fidelity—digit by digit—with zero rounding, distortion, or overflow errors.
 
 ---
 
@@ -17,7 +17,7 @@ Immensum Engine is a high-precision numerical engine designed to handle massive 
 
 ## 🛠️ How It Works
 
-1. **Input:** Google Sheets™ passes your massive numeric values safely to the Immensum engine.
+1. **Input:** Google Sheets™ passes your massive numeric values safely to the Immensum Engine core.
 2. **Compute:** The engine calculates the data down to the exact digit without any truncation.
 3. **Output:** The exact result is returned to your cell instantly as a stable text string, preserving every single decimal and integer.
 
@@ -27,13 +27,14 @@ Perfect for advanced cryptography data, massive financial ledgers, scientific da
 
 ## 📄 Compliance & Resources
 
-* [Terms of Service](https://Immensum.app/terms.html)
-* [Privacy Policy](https://Immensum.app/privacy.html)
-* [Support & Bug Reports](https://Immensum.app/issues)
+* [Homepage & Platform](https://immensum.app)
+* [Terms of Service](https://immensum.app/terms.html)
+* [Privacy Policy](https://immensum.app/privacy.html)
+* [Support & Bug Reports](https://github.com/velariastarfire/Immensum/issues)
 
 ---
 *Google Sheets™ is a trademark of Google LLC. Immensum Engine is an independent software tool and is not affiliated with, endorsed by, or connected to Google LLC.*
 
 <p align="center">
-  <img src="https://Immensum.app/refs/heads/main/Assets/Logo_96.png" alt="Immensum Logo" width="50" style="border-radius: 15px;"/>
+  <img src="./Assets/Logo_96.png" alt="Immensum Engine Logo" width="64" style="border-radius: 15px;"/>
 </p>

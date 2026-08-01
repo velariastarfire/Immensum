@@ -1,4 +1,4 @@
-# Immensum for Google Sheets™
+# Immensum Engine
 
 > The infinite, made calculable. 
 
@@ -27,9 +27,9 @@ Perfect for advanced cryptography data, massive financial ledgers, scientific da
 
 ## 📄 Compliance & Resources
 
-* [Terms of Service](https://velariastarfire.github.io/Immensum/terms.html)
-* [Privacy Policy](https://velariastarfire.github.io/Immensum/privacy.html)
-* [Support & Bug Reports](https://github.com/velariastarfire/Immensum/issues)
+* [Terms of Service](https://Immensum.app/terms.html)
+* [Privacy Policy](https://Immensum.app/privacy.html)
+* [Support & Bug Reports](https://Immensum.app/issues)
 
 ---
 *Google Sheets™ is a trademark of Google LLC. Immensum for Google Sheets™ is an independent software tool and is not affiliated with, endorsed by, or connected to Google LLC.*

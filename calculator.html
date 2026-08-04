@@ -200,8 +200,10 @@
             border-bottom: 1px solid #10081d;
         }
 
-        .log-entry.latest {
-            color: #00d4ff;
+        .log-entry.latest strong {
+            color: #ffffff !important;
+            font-size: 1rem;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 12px rgba(0, 212, 255, 0.4);
         }
 
         .log-entry.history {
@@ -381,7 +383,7 @@
                     <span class="op-prefix">&gt;&gt; Operation:</span> ${rawA} ${opSymbol} ${rawB} =<br>
                     <strong>${resultVal}</strong> 
                     <span class="telemetry-tag">[ ⚡ ${durationMs} ms ]</span>
-                    <span class="copy-link" onclick="copyString('${resultVal}')">[copy]</span>
+                    <span class="copy-link" onclick="copyString('${resultVal}', this)">[copy]</span>
                 `;
 
                 feed.prepend(entryCard);
@@ -401,11 +403,20 @@
             feed.prepend(errCard);
         }
 
-        function copyString(text) {
-            navigator.clipboard.writeText(text);
-            alert("String copied to clipboard!");
+        function copyString(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Instant silent visual confirmation right on the link!
+                const originalText = element.innerText;
+                element.innerText = "[copied!]";
+                element.style.color = "#ffd700"; // Glow gold
+                
+                setTimeout(() => {
+                    element.innerText = originalText;
+                    element.style.color = ""; // Revert back to original
+                }, 1500);
+            });
         }
-
+     
         function clearConsoleLog() {
             document.getElementById('terminalFeed').innerHTML = `
                 <div class="log-entry" style="color: #4b5563;">

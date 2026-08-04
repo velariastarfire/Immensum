@@ -1,23 +1,39 @@
 /* ==========================================================================
-   🌌 IMMENSUM CORE DESIGN STYLE
+   🌌 IMMENSUM CORE DESIGN STYLE & DYNAMIC THEME ENGINE
    ========================================================================== */
+
+/* 🎨 GLOBAL CSS THEME VARIABLES (Default Cosmic Theme) */
+:root {
+    --bg-space: #0b091a;
+    --bg-space-gradient: radial-gradient(circle at 50% 0%, #1e1145 0%, #0b091a 70%);
+    --card-bg: linear-gradient(145deg, #13112c, #0f0d24);
+    --card-border-cyan: rgba(0, 212, 255, 0.1);
+    --card-border-gold: rgba(255, 215, 0, 0.05);
+    --electric-cyan: #00d4ff;
+    --electric-cyan-glow: rgba(0, 212, 255, 0.4);
+    --gold-accent: #ffd700;
+    --gold-text-gradient: linear-gradient(135deg, #ffd700 30%, #fff4ba 100%);
+    --text-primary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-subtle: #64748b;
+    --footer-bg: #060512;
+}
 
 /* 1. Resetting the canvas for a clean template */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Fixed the double box-box-sizing typo here! */
+    box-sizing: border-box;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* 2. Turning on the dark-mode cosmic engine */
 body {
-    background-color: #0b091a; /* Deep space dark purple */
-    color: #e2e8f0; /* Crisp white-silver for body text */
+    background-color: var(--bg-space);
+    color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Subtly embedding our favored cosmic neon atmosphere */
-    background-image: radial-gradient(circle at 50% 0%, #1e1145 0%, #0b091a 70%);
+    background-image: var(--bg-space-gradient);
 }
 
 /* 3. The Navigation Forge Bar */
@@ -28,7 +44,7 @@ body {
     padding: 1.5rem 2rem;
     background: rgba(11, 9, 26, 0.8);
     backdrop-filter: blur(12px); /* Sleek glassmorphism */
-    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    border-bottom: 1px solid var(--card-border-cyan);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -38,12 +54,12 @@ body {
     font-weight: 800;
     font-size: 1.4rem;
     letter-spacing: 2px;
-    color: #ffd700; /* Rich gold from our coin badge */
+    color: var(--gold-accent);
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .nav-links a {
-    color: #94a3b8;
+    color: var(--text-muted);
     text-decoration: none;
     margin-left: 1.5rem;
     font-weight: 500;
@@ -51,10 +67,10 @@ body {
 }
 
 .nav-links a:hover {
-    color: #00d4ff; /* Dynamic cyan glow link hover */
+    color: var(--electric-cyan);
 }
 
-/* 🛠️ Main Workspace Constraints (The Missing Engine Piece) */
+/* 🛠️ Main Workspace Constraints */
 .module-container {
     max-width: 1100px;
     margin: 2rem auto;
@@ -68,15 +84,15 @@ body {
 
 .module-header h1 {
     font-size: 3rem;
-    background: linear-gradient(135deg, #ffd700 30%, #fff4ba 100%);
+    background: var(--gold-text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
 }
 
 .screenshot-card {
-    background: linear-gradient(145deg, #13112c, #0f0d24);
-    border: 1px solid rgba(0, 212, 255, 0.1);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border-cyan);
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -84,7 +100,7 @@ body {
 }
 
 .screenshot-caption {
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 1.1rem;
     line-height: 1.6;
 }
@@ -100,8 +116,7 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    /* Beautiful gradient text pulling from your sidebar theme */
-    background: linear-gradient(135deg, #ffd700 30%, #fff4ba 100%);
+    background: var(--gold-text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -110,7 +125,7 @@ body {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 1rem auto;
-    color: #94a3b8;
+    color: var(--text-muted);
 }
 
 /* 5. Buttons forged for action */
@@ -125,9 +140,9 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #00d4ff, #0072ff);
+    background: linear-gradient(135deg, var(--electric-cyan), #0072ff);
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 4px 15px var(--electric-cyan-glow);
 }
 
 .btn-primary:hover {
@@ -137,7 +152,7 @@ body {
 
 .btn-secondary {
     border: 2px solid rgba(0, 212, 255, 0.4);
-    color: #00d4ff;
+    color: var(--electric-cyan);
 }
 
 .btn-secondary:hover {
@@ -160,8 +175,8 @@ body {
 }
 
 .features-grid div.feature-card {
-    background: linear-gradient(145deg, #13112c, #0f0d24);
-    border: 1px solid rgba(255, 215, 0, 0.05); /* Soft gold edge */
+    background: var(--card-bg);
+    border: 1px solid var(--card-border-gold);
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 1.5rem;
@@ -174,19 +189,19 @@ body {
 }
 
 .feature-card h3 {
-    color: #00d4ff; /* Cyan title text */
+    color: var(--electric-cyan);
     margin-bottom: 0.5rem;
 }
 
 /* 7. Compliant layout for the footer */
 .forge-footer {
-    background: #060512;
+    background: var(--footer-bg);
     padding: 3rem 2rem;
     text-align: center;
-    border-top: 1px solid rgba(255, 215, 0, 0.05);
+    border-top: 1px solid var(--card-border-gold);
     margin-top: 6rem;
     font-size: 0.9rem;
-    color: #64748b;
+    color: var(--text-subtle);
 }
 
 .legal-links {
@@ -194,13 +209,13 @@ body {
 }
 
 .legal-links a {
-    color: #00d4ff;
+    color: var(--electric-cyan);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .legal-links a:hover {
-    color: #ffd700; /* Gold flip on legal hover */
+    color: var(--gold-accent);
 }
 
 .divider {
@@ -232,7 +247,7 @@ body {
 }
 
 .proof-table th {
-    color: #ffd700; /* Gold headers */
+    color: var(--gold-accent);
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -247,10 +262,9 @@ body {
     font-size: 0.95rem;
 }
 
-/* Styling the monstrously exact outputs */
 .exact-output {
     font-family: 'Courier New', Courier, monospace;
-    color: #00d4ff; /* Neon cyan glow for precision text */
+    color: var(--electric-cyan);
     background: rgba(0, 212, 255, 0.05);
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
@@ -260,14 +274,13 @@ body {
 
 .operation-badge {
     font-weight: bold;
-    color: #ffd700;
+    color: var(--gold-accent);
 }
 
 /* ==========================================================================
-   🌌 IMMENSUM MODULE WORKSPACE STYLES (Google Sheets & Future Expansions)
+   🌌 IMMENSUM MODULE WORKSPACE STYLES
    ========================================================================== */
 
-/* 🛠️ Video & Section Alignment Contenders */
 .showcase-section {
     max-width: 850px;
     margin: 0 auto 2rem auto;
@@ -303,7 +316,7 @@ body {
 }
 
 .pricing-section p {
-    color: #94a3b8;
+    color: var(--text-muted);
     margin-bottom: 3rem;
 }
 
@@ -314,7 +327,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* 🎫 Custom Variant Cards */
 .pricing-card {
     position: relative;
     border-radius: 20px;
@@ -335,7 +347,6 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.1);
 }
 
-/* 🏷️ Badge Overlays */
 .card-badge {
     position: absolute;
     top: -15px;
@@ -352,27 +363,26 @@ body {
 }
 
 .card-badge.blue-glow {
-    background: linear-gradient(135deg, #00d4ff, #0072ff);
+    background: linear-gradient(135deg, var(--electric-cyan), #0072ff);
 }
 
 .card-badge.gold-glow {
-    background: linear-gradient(135deg, #ffd700, #ff9900);
+    background: linear-gradient(135deg, var(--gold-accent), #ff9900);
     color: #0b091a;
 }
 
-/* 📊 Price Numbers & Text Styling */
 .price-display {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
 }
 
-.price-display.cyan-text { color: #00d4ff; }
-.price-display.gold-text { color: #ffd700; }
+.price-display.cyan-text { color: var(--electric-cyan); }
+.price-display.gold-text { color: var(--gold-accent); }
 
 .price-sub {
     font-size: 1rem;
-    color: #64748b;
+    color: var(--text-subtle);
 }
 
 .price-highlight-text {
@@ -382,7 +392,7 @@ body {
 }
 
 .price-description {
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 2rem;
     line-height: 1.5;

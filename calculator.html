@@ -193,22 +193,37 @@
             gap: 1rem;
         }
 
-        .log-entry {
-            line-height: 1.5;
-            word-break: break-all;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid #10081d;
+        /* 🪟 TERMINAL FEED COLOR HIERARCHY */
+        .log-entry.latest {
+            opacity: 1;
         }
-
-        .log-entry.latest strong {
-            color: #ffffff !important;
-            font-size: 1rem;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 12px rgba(0, 212, 255, 0.4);
+        
+        .log-entry.latest .op-prefix,
+        .log-entry.latest .op-math {
+            color: #00d4ff; /* Bright Cyan for active math equation */
         }
-
+        
+        .log-entry.latest .result-text {
+            color: #38bdf8; /* Bright Electric Blue for active answer string */
+            font-size: 0.95rem;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+        }
+        
+        /* 2. Older History Entries (Muted automatically as new math arrives) */
         .log-entry.history {
-            color: #3b82f6;
-            opacity: 0.85;
+            opacity: 0.45; /* Softly dims older receipt history */
+            transition: opacity 0.3s ease;
+        }
+        
+        .log-entry.history .op-prefix,
+        .log-entry.history .op-math {
+            color: #1d4ed8; /* Muted deep slate/blue for historical math */
+        }
+        
+        .log-entry.history .result-text {
+            color: #2563eb; /* Darker muted blue for historical answers */
+            font-weight: normal;
         }
 
         .op-prefix {
@@ -380,20 +395,20 @@
                 const entryCard = document.createElement('div');
                 entryCard.className = 'log-entry latest';
                 entryCard.innerHTML = `
-                    <span class="op-prefix">&gt;&gt; Operation:</span> ${rawA} ${opSymbol} ${rawB} =<br>
-                    <strong>${resultVal}</strong> 
+                    <span class="op-prefix">&gt;&gt; Operation:</span> <span class="op-math">${rawA} ${opSymbol} ${rawB} =</span><br>
+                    <strong class="result-text">${resultVal}</strong> 
                     <span class="telemetry-tag">[ ⚡ ${durationMs} ms ]</span>
                     <span class="copy-link" onclick="copyString('${resultVal}', this)">[copy]</span>
                 `;
-
+                
                 feed.prepend(entryCard);
-
-            } catch (err) {
-                // Catches browser CORS blocks, SSL issues, or dropped requests
-                const details = err.message || err.toString();
-                printLogEntry(feed, `>> Core Fault (Browser/CORS): ${details} | Check Console (F12) for origin flags.`, "#ef4444");
+    
+                } catch (err) {
+                    // Catches browser CORS blocks, SSL issues, or dropped requests
+                    const details = err.message || err.toString();
+                    printLogEntry(feed, `>> Core Fault (Browser/CORS): ${details} | Check Console (F12) for origin flags.`, "#ef4444");
+                }
             }
-        }
 
         function printLogEntry(feed, text, color) {
             const errCard = document.createElement('div');

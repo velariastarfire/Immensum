@@ -320,7 +320,7 @@
         </div>
     </footer>
 
-    <script>
+ <script>
         async function runCoreMath(opEndpoint, opSymbol) {
             const rawA = document.getElementById('valA').value.trim();
             const rawB = document.getElementById('valB').value.trim();
@@ -336,14 +336,35 @@
             try {
                 const response = await fetch(`https://google-bridge.velariastarfire.workers.dev/${opEndpoint}`, {
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ a: rawA, b: rawB, license_key: "WEB_DEMO_ACCESS" })
+                    headers: { 
+                        "Content-Type": "application/json" 
+                    },
+                    body: JSON.stringify({ 
+                        a: rawA, 
+                        b: rawB, 
+                        license_key: "WEB_DEMO_ACCESS" 
+                    })
                 });
 
-                const data = await response.json();
                 const endTime = performance.now();
                 const durationMs = (endTime - startTime).toFixed(4);
 
+                // If the worker returns 401, 403, 404, or 500, read the exact JSON payload
+                if (!response.ok) {
+                    let errDetails = `HTTP ${response.status} ${response.statusText}`;
+                    try {
+                        const errJson = await response.json();
+                        errDetails += ` | ${JSON.stringify(errJson)}`;
+                    } catch(e) {
+                        const text = await response.text();
+                        if (text) errDetails += ` | ${text}`;
+                    }
+
+                    printLogEntry(feed, `>> Core Fault [HTTP ${response.status}]: ${errDetails}`, "#ef4444");
+                    return;
+                }
+
+                const data = await response.json();
                 const resultVal = data.result || data.error || "Execution Error";
 
                 // Demote existing entries from 'latest' to 'history'
@@ -353,7 +374,7 @@
                     el.classList.add('history');
                 });
 
-                // Construct terminal output line
+                // Construct successful terminal output line
                 const entryCard = document.createElement('div');
                 entryCard.className = 'log-entry latest';
                 entryCard.innerHTML = `
@@ -363,16 +384,21 @@
                     <span class="copy-link" onclick="copyString('${resultVal}')">[copy]</span>
                 `;
 
-                // Prepend to top of feed
                 feed.prepend(entryCard);
 
             } catch (err) {
-                const errCard = document.createElement('div');
-                errCard.className = 'log-entry';
-                errCard.style.color = '#ef4444';
-                errCard.innerText = `>> Core Fault: Network connection failed.`;
-                feed.prepend(errCard);
+                // Catches browser CORS blocks, SSL issues, or dropped requests
+                const details = err.message || err.toString();
+                printLogEntry(feed, `>> Core Fault (Browser/CORS): ${details} | Check Console (F12) for origin flags.`, "#ef4444");
             }
+        }
+
+        function printLogEntry(feed, text, color) {
+            const errCard = document.createElement('div');
+            errCard.className = 'log-entry';
+            errCard.style.color = color;
+            errCard.innerText = text;
+            feed.prepend(errCard);
         }
 
         function copyString(text) {

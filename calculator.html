@@ -248,6 +248,55 @@
         .copy-link:hover {
             color: #ffd700;
         }
+
+        /* ⚡ B2B ENTERPRISE API BANNER */
+        .b2b-banner {
+            background: linear-gradient(135deg, #140b2b 0%, #06192e 100%);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+        }
+        
+        .b2b-info h4 {
+            color: #ffd700;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin: 0 0 0.25rem 0;
+            letter-spacing: 1px;
+        }
+        
+        .b2b-info p {
+            color: #94a3b8;
+            font-size: 0.78rem;
+            margin: 0;
+            font-family: monospace;
+        }
+        
+        .b2b-btn {
+            background: linear-gradient(135deg, #00d4ff, #0072ff);
+            color: #ffffff;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 0.75rem;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            border: 1px solid #00d4ff;
+            margin-left: 1rem;
+        }
+        
+        .b2b-btn:hover {
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -307,6 +356,17 @@
                 <button class="matrix-btn" onclick="runCoreMath('div', '/')">DIV (A / B)</button>
             </div>
 
+            
+            <!-- ⚡ B2B ENTERPRISE BANNER -->
+            <div class="b2b-banner">
+                <div class="b2b-info">
+                    <h4>⚡ NEED BULK BATCHING OR DIRECT API INTEGRATION?</h4>
+                    <p>Bypass single-line limits. Integrate Immensum Engine directly into Python, Java, Node, or C# pipelines.</p>
+                </div>
+                <a href="mailto:b2b@immensum.app?subject=Immensum%20Engine%20B2B%20API%20Inquiry" class="b2b-btn">CONTACT B2B PIPELINE</a>
+            </div>
+
+            
             <!-- Log Header & Feed -->
             <div class="log-header-bar">
                 <span class="section-header" style="font-size: 0.85rem;">CORE LOG SYSTEM</span>

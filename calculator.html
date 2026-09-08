@@ -311,6 +311,7 @@
         </div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
+            <a href="calculator.html" style="color: #00d4ff;">Web Calculator</a>
             <a href="sheets-module.html">Sheets Module</a>
             <a href="https://github.com/velariastarfire/Immensum" target="_blank">GitHub</a>
         </nav>
@@ -382,6 +383,21 @@
         </div>
     </main>
 
+    <!-- 📊 GOOGLE SHEETS MODULE PROMO BANNER -->
+<div style="background: linear-gradient(135deg, #0d1b2a 0%, #1e1b4b 100%); border: 1px solid #38bdf8; border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <div>
+        <h4 style="color: #00d4ff; font-family: monospace; font-size: 0.95rem; margin: 0 0 0.25rem 0; letter-spacing: 1px;">
+            📊 NEED THIS PRECISION IN YOUR SPREADSHEETS?
+        </h4>
+        <p style="color: #94a3b8; font-size: 0.8rem; margin: 0; font-family: monospace;">
+            Run infinite-length formulas natively inside Google Sheets™ without truncation or <code>#NUM!</code> errors.
+        </p>
+    </div>
+    <a href="sheets-module.html" class="matrix-btn" style="background: linear-gradient(135deg, #00d4ff, #0072ff); color: #fff; border: none; text-decoration: none; font-size: 0.8rem; white-space: nowrap; padding: 0.6rem 1.2rem;">
+        Get Google Sheets™ Module →
+    </a>
+</div>
+
     <!-- 🛠️ FOOTER -->
     <footer class="forge-footer">
         <div class="footer-content">
@@ -396,7 +412,7 @@
         </div>
     </footer>
 
- <script>
+    <script>
         async function runCoreMath(opEndpoint, opSymbol) {
             const rawA = document.getElementById('valA').value.trim();
             const rawB = document.getElementById('valB').value.trim();
@@ -424,7 +440,6 @@
                 const endTime = performance.now();
                 const durationMs = (endTime - startTime).toFixed(4);
 
-                // If the worker returns 401, 403, 404, or 500, read the exact JSON payload
                 if (!response.ok) {
                     let errDetails = `HTTP ${response.status} ${response.statusText}`;
                     try {
@@ -442,14 +457,12 @@
                 const data = await response.json();
                 const resultVal = data.result || data.error || "Execution Error";
 
-                // Demote existing entries from 'latest' to 'history'
                 const currentLatest = feed.querySelectorAll('.log-entry.latest');
                 currentLatest.forEach(el => {
                     el.classList.remove('latest');
                     el.classList.add('history');
                 });
 
-                // Construct successful terminal output line
                 const entryCard = document.createElement('div');
                 entryCard.className = 'log-entry latest';
                 entryCard.innerHTML = `
@@ -461,12 +474,11 @@
                 
                 feed.prepend(entryCard);
     
-                } catch (err) {
-                    // Catches browser CORS blocks, SSL issues, or dropped requests
-                    const details = err.message || err.toString();
-                    printLogEntry(feed, `>> Core Fault (Browser/CORS): ${details} | Check Console (F12) for origin flags.`, "#ef4444");
-                }
+            } catch (err) {
+                const details = err.message || err.toString();
+                printLogEntry(feed, `>> Core Fault (Browser/CORS): ${details} | Check Console (F12) for origin flags.`, "#ef4444");
             }
+        }
 
         function printLogEntry(feed, text, color) {
             const errCard = document.createElement('div');
@@ -478,18 +490,17 @@
 
         function copyString(text, element) {
             navigator.clipboard.writeText(text).then(() => {
-                // Instant silent visual confirmation right on the link!
                 const originalText = element.innerText;
                 element.innerText = "[copied!]";
-                element.style.color = "#ffd700"; // Glow gold
+                element.style.color = "#ffd700";
                 
                 setTimeout(() => {
                     element.innerText = originalText;
-                    element.style.color = ""; // Revert back to original
+                    element.style.color = "";
                 }, 1500);
             });
         }
-     
+      
         function clearConsoleLog() {
             document.getElementById('terminalFeed').innerHTML = `
                 <div class="log-entry" style="color: #4b5563;">

@@ -258,49 +258,56 @@ body {
     color: var(--text-muted);
 }
 
-/* 5. Buttons forged for action */
-.cta-buttons a {
+/* 🌌 5. Buttons forged for action */
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Base button structure used by all variants */
+.cta-btn {
     display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: 8px; /* Clean, modern slightly-rounded corners */
+    font-weight: 700;
+    font-size: 1rem;
     text-decoration: none;
-    margin: 0 0.75rem;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    display: block;
-    text-align: center;
-    text-decoration: none;
+    transition: all 0.25s ease-in-out;
     box-sizing: border-box;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    
-    /* 🌌 High Contrast Base Styles */
-    background: #00d4ff;       /* Vibrant cyan background */
-    color: #0b091a;            /* Deep dark space purple for text readability */
-    
     border: none;
-    transition: all 0.2s ease-in-out;
 }
 
-.btn-primary:hover {
-    background: #ffffff;       /* Pure white flash on hover */
+/* 💎 The Cyan Twin (Primary Action) */
+.cta-btn.btn-cyan {
+    background: #00d4ff; /* Vibrant cyan */
+    color: #0b091a;      /* Dark text for absolute readability */
+    box-shadow: 0 4px 14px rgba(0, 212, 255, 0.2);
+}
+
+.cta-btn.btn-cyan:hover {
+    background: #ffffff; /* Brilliantly flashes white */
     color: #0b091a;
-    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
-}
-
-.btn-secondary {
-    border: 2px solid rgba(0, 212, 255, 0.4);
-    color: var(--electric-cyan);
-}
-
-.btn-secondary:hover {
-    background: rgba(0, 212, 255, 0.1);
+    box-shadow: 0 6px 22px rgba(0, 212, 255, 0.5);
     transform: translateY(-2px);
 }
+
+/* 🏆 The Gold Twin (Secondary Action) */
+.cta-btn.btn-gold {
+    background: transparent;
+    color: #ffd700; /* Beautiful cosmic gold text */
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 4px 14px rgba(255, 215, 0, 0.05);
+}
+
+.cta-btn.btn-gold:hover {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: #ffd700;
+    box-shadow: 0 6px 22px rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+}
+
 
 /* 6. Grid system for features */
 .features-grid {

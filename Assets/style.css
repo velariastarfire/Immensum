@@ -140,9 +140,8 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--electric-cyan), #0072ff);
-    color: #ffffff;
-    box-shadow: 0 4px 15px var(--electric-cyan-glow);
+    border: 2px solid rgba(0, 212, 255, 0.4);
+    color: var(--electric-cyan);
 }
 
 .btn-primary:hover {

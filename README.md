@@ -10,7 +10,7 @@ Immensum Engine is a high-precision numerical engine designed to handle massive 
 
 * **Infinite Precision Arithmetic:** Perform flawless calculations on numbers of arbitrary length without hitting standard 64-bit float limitations.
 * **Zero Data Distortion:** Prevents spreadsheets from truncating large numbers or forcing them into unreadable scientific notation.
-* **Secure Execution:** Processes inputs within a protected black-box environment, returning exact answers directly to your sheet as crisp, lossless text strings.
+* **Secure Execution:** Processes data inside a protected environment, returning absolute answers right to your cells as clean, predictable text strings that won't warp or truncate.
 * **Slick Sidebar Console:** Manage your licenses, subscriptions, and quick actions natively alongside your data.
 
 ---
@@ -21,7 +21,7 @@ Immensum Engine is a high-precision numerical engine designed to handle massive 
 2. **Compute:** The engine calculates the data down to the exact digit without any truncation.
 3. **Output:** The exact result is returned to your cell instantly as a stable text string, preserving every single decimal and integer.
 
-Perfect for advanced cryptography data, massive financial ledgers, scientific datasets, or any high-stakes project where a single lost digit of precision compromises the entire calculation.
+Built for anyone managing high-precision numbers—whether you are tracking blockchain token allocations, auditing multi-million dollar ledgers, or simply tired of spreadsheet workarounds silently destroying your data.
 
 ---
 

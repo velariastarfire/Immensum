@@ -140,13 +140,26 @@ body {
 }
 
 .btn-primary {
-    border: 2px solid rgba(0, 212, 255, 0.4);
-    color: var(--electric-cyan);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    
+    /* 🌌 High Contrast Base Styles */
+    background: #00d4ff;       /* Vibrant cyan background */
+    color: #0b091a;            /* Deep dark space purple for text readability */
+    
+    border: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+    background: #ffffff;       /* Pure white flash on hover */
+    color: #0b091a;
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
 }
 
 .btn-secondary {

@@ -596,6 +596,43 @@
 
         }
 
+                /* 📱 MOBILE RESPONSIVE ADAPTATION INTERCEPT */
+        @media screen and (max-width: 680px) {
+            .matrix-window {
+                margin: 0.5rem;
+                border-radius: 8px;
+            }
+
+            .matrix-titlebar {
+                flex-direction: column;
+                gap: 0.8rem;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            /* Stacks Value A and Value B on top of each other */
+            .pipeline-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }
+
+            /* Splits the math buttons into a neat 2x2 grid instead of crushing 4 in a row */
+            .action-row {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.75rem;
+            }
+
+            .matrix-body {
+                padding: 1rem;
+            }
+
+            .b2b-banner {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
     </style>
 
 </head>

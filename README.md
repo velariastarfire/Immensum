@@ -17,21 +17,21 @@ Immensum Engine is an ultra-lightweight, high-precision numerical engine designe
 
 ## 📊 Live Deployment Preview & Fidelity Control
 
-Lập trình viên và các doanh nghiệp (B2B) đòi hỏi sự chính xác dữ liệu tuyệt đối. Immensum vượt qua giới hạn làm tròn mặc định của bảng tính, đảm bảo mọi chữ số (dù là phần nguyên hay phần thập phân siêu nhỏ) đều được bảo toàn nguyên vẹn trên lưới tính toán.
+Developers and corporate enterprises demand absolute data integrity under pressure. Immensum shatters default spreadsheet rounding thresholds, ensuring every single digit—whether an immense whole integer or a microscopic trailing decimal—is perfectly preserved across your active calculation grids.
 
-### Giao Diện Bảng Tính Thực Tế (Google Sheets™ Deployment)
+### Live Spreadsheet Environment (Google Sheets™ Deployment)
 <p align="center">
   <img src="./Assets/matrix-calculation.png" alt="Immensum Spreadsheet Execution" width="700" style="border-radius: 8px; border: 1px solid #3b1366;"/>
 </p>
 
-### Bảng So Sánh Độ Chính Xác Dữ Liệu (Fidelity Comparison)
+### Data Precision Validation Matrix
 
-| Thao Tác Số Học (Operation Size) | Trình Xử Lý Mặc Định (Native Spreadsheet) | Giải Pháp Immensum Engine | Trạng Thái Kết Quả (Output Target) |
+| Arithmetic Operation Size | Native Spreadsheet Engine | Immensum Engine Environment | Target Output Fidelity |
 | :--- | :--- | :--- | :--- |
-| **Phép Tính Chuỗi Siêu Dài** | Bị biến thành Ký tự khoa học (Scientific Notation) hoặc lỗi `#NUM!` | **Hiển thị chuỗi số đầy đủ** | Kết quả chính xác đến từng chữ số cuối cùng |
-| **Phép Cộng Số Nguyên Lớn** | Tự động làm tròn các số đuôi về `0` | **Bảo toàn 100% giá trị thực** | Trả về chuỗi văn bản (String) bền vững |
+| **Massive Multi-Digit String** | Truncated to Scientific Notation or throws `#NUM!` | **Displays full, raw string length** | Exact verification down to the final digit |
+| **Large Integer Summation** | Automatically rounds trailing decimals down to `0` | **Preserves 100% genuine value stability** | Returns a secure, unwarped string output |
 
-### Bảng Điều Khiển Quản Lý Bản Quyền (License Authorization Window)
+### License Authorization & Seats Management (Console Sidebar)
 <p align="center">
   <img src="./Assets/console-active.png" alt="Immensum Active Console" width="350" style="border-radius: 8px; border: 1px solid #3b1366;"/>
 </p>

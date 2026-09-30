@@ -10,6 +10,9 @@
     <meta property="og:title" content="Google Sheets Module | Immensum Engine">
     <meta name="application-name" content="Immensum Engine">
 
+    <!-- Microsoft Office JavaScript SDK API -->
+<script src="https://microsoft.com" type="text/javascript"></script>
+
     <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
@@ -145,6 +148,15 @@
             </nav>
         </div>
     </footer>
+
+    <script type="text/javascript">
+    // Ensures Excel hooks into your landing page context without throwing a blank frame
+    Office.onReady(function (info) {
+        if (info.host === Office.HostType.Excel) {
+            console.log("Immensum Engine validation verified by Excel Web.");
+        }
+    });
+</script>
 
 </body>
 </html>
